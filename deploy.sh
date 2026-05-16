@@ -1,3 +1,4 @@
+#!/usr/bin/env sh
 # 不依赖 GitHub Action时，在本机一键把文档站发布到github-pages
 set -e # 任一步失败就退出
 
