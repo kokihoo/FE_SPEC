@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "fe-spec-docs",
+  title: "FE-SPEC-DOCS",
   description: "A VitePress Site",
   base: '/FE_SPEC/',
   themeConfig: {

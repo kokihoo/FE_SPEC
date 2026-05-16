@@ -221,3 +221,15 @@ pnpm add conventional-changelog-conventionalcommits --save-dev
   脚本做的事可以概括为：
   构建VitePress文档静态站 ——> 把构建结果强制推到远程的gh-pages分支（给GitHub Pages用）。
   接下来写deploy.sh
+
+  接下来配置第二种GitHub Actions
+  正常流程是在github actions上配置 然后在来回本地 可以在本地维护
+  选择模版static.yml 在此基础上改，也可以直接在本地新建生成再推到远端
+  过程是：
+  安装 Node/pnpm → pnpm run docs:build → 用官方 actions/upload-pages-artifact + actions/deploy-pages（或你们文档里的 JamesIves/github-pages-deploy-action）上传 docs/.vitepress/dist。
+
+  ```bash
+    - pnpm install
+    - pnpm run docs:build
+    - 部署 docs/.vitepress/dist
+  ```

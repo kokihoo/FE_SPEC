@@ -3,22 +3,22 @@
 layout: home
 
 hero:
-  name: "FE-SPEC-DOCS test"
-  text: "A VitePress Site"
+  name: "FE-SPEC"
+  text: "前端编码规范工程化"
   tagline: My great project tagline
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: 立刻进入 ——>
       link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+    # - theme: alt
+    #   text: API Examples
+    #   link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 全面的前端生态
+    details: 支持前端全部生态，无需关注环境，支持直接使用
+  - title: 完善的规范配件
+    details: 支持对全部前端配置实现一键接入、一键扫描、一键修复、一键升级
+  - title: 完整的测试用例
+    details: 完整的测试用例
 ---
