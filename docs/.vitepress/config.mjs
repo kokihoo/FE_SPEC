@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "fe-spec-docs",
   description: "A VitePress Site",
-  base: '/fe_spec/',
+  base: '/FE_SPEC/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
