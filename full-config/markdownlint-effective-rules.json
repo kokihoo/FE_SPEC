@@ -1,0 +1,532 @@
+{
+  "_note": "options 来自配置合并；空对象表示未在 JSON 中覆盖该规则参数，各字段在规则实现内的默认值见对应版本 doc/Rules.md。逻辑与 markdownlint 内部 getEffectiveConfig 一致。",
+  "markdownlintVersion": "0.40.0",
+  "rules": {
+    "MD001": {
+      "aliases": [
+        "heading-increment"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD003": {
+      "aliases": [
+        "heading-style"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD004": {
+      "aliases": [
+        "ul-style"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {
+        "style": "dash"
+      }
+    },
+    "MD005": {
+      "aliases": [
+        "list-indent"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD007": {
+      "aliases": [
+        "ul-indent"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD009": {
+      "aliases": [
+        "no-trailing-spaces"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {
+        "br_spaces": 0,
+        "list_item_empty_lines": false
+      }
+    },
+    "MD010": {
+      "aliases": [
+        "no-hard-tabs"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD011": {
+      "aliases": [
+        "no-reversed-links"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD012": {
+      "aliases": [
+        "no-multiple-blanks"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD013": {
+      "aliases": [
+        "line-length"
+      ],
+      "enabled": false,
+      "severity": "error",
+      "options": {}
+    },
+    "MD014": {
+      "aliases": [
+        "commands-show-output"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD018": {
+      "aliases": [
+        "no-missing-space-atx"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD019": {
+      "aliases": [
+        "no-multiple-space-atx"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD020": {
+      "aliases": [
+        "no-missing-space-closed-atx"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD021": {
+      "aliases": [
+        "no-multiple-space-closed-atx"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD022": {
+      "aliases": [
+        "blanks-around-headings"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD023": {
+      "aliases": [
+        "heading-start-left"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD024": {
+      "aliases": [
+        "no-duplicate-heading"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD025": {
+      "aliases": [
+        "single-title",
+        "single-h1"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD026": {
+      "aliases": [
+        "no-trailing-punctuation"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD027": {
+      "aliases": [
+        "no-multiple-space-blockquote"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD028": {
+      "aliases": [
+        "no-blanks-blockquote"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD029": {
+      "aliases": [
+        "ol-prefix"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD030": {
+      "aliases": [
+        "list-marker-space"
+      ],
+      "enabled": false,
+      "severity": "error",
+      "options": {}
+    },
+    "MD031": {
+      "aliases": [
+        "blanks-around-fences"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD032": {
+      "aliases": [
+        "blanks-around-lists"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD033": {
+      "aliases": [
+        "no-inline-html"
+      ],
+      "enabled": false,
+      "severity": "error",
+      "options": {}
+    },
+    "MD034": {
+      "aliases": [
+        "no-bare-urls"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD035": {
+      "aliases": [
+        "hr-style"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD036": {
+      "aliases": [
+        "no-emphasis-as-heading"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD037": {
+      "aliases": [
+        "no-space-in-emphasis"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD038": {
+      "aliases": [
+        "no-space-in-code"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD039": {
+      "aliases": [
+        "no-space-in-links"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD040": {
+      "aliases": [
+        "fenced-code-language"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD041": {
+      "aliases": [
+        "first-line-heading",
+        "first-line-h1"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD042": {
+      "aliases": [
+        "no-empty-links"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD043": {
+      "aliases": [
+        "required-headings"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD044": {
+      "aliases": [
+        "proper-names"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {
+        "names": [
+          "JavaScript",
+          "HTML",
+          "CSS",
+          "AJAX",
+          "JSON",
+          "DOM",
+          "BOM",
+          "Less",
+          "Sass",
+          "SCSS",
+          "HTTP",
+          "HTTPS",
+          "WebSocket",
+          "ECMAScript",
+          "ECMAScript 2015",
+          "ECMAScript 6",
+          "ES6",
+          "ES2015",
+          "jQuery",
+          "jQuery Mobile",
+          "React",
+          "React Native",
+          "Bootstrap",
+          "Gulp",
+          "Grunt",
+          "webpack",
+          "Yeoman",
+          "npm",
+          "spm",
+          "Babel",
+          "Mocha",
+          "Jasmine",
+          "PHP",
+          "Java",
+          "Node.js",
+          "NodeJS",
+          "MySQL",
+          "MongoDB",
+          "Redis",
+          "Apache",
+          "Nginx",
+          "NGINX",
+          "GitHub",
+          "GitLab",
+          "GitCafe",
+          "Chrome",
+          "Firefox",
+          "Safari",
+          "Internet Explore",
+          "IE",
+          "IE 7",
+          "Opera",
+          "UC",
+          "Android",
+          "iOS",
+          "Windows",
+          "OS X",
+          "Ubuntu",
+          "Linux",
+          "Debian",
+          "PC",
+          "Mobile",
+          "H5",
+          "MacBook",
+          "MacBook Pro",
+          "MacBook Air",
+          "iMac",
+          "Mac Pro",
+          "iPad",
+          "Mac mini",
+          "iPad Air",
+          "iPad Air 2",
+          "iPad mini",
+          "iPhone",
+          "iPhone 6s",
+          "iPhone 6s Plus",
+          "Apple Watch",
+          "Alibaba",
+          "Taobao",
+          "Google",
+          "Alphabet",
+          "Apple",
+          "Microsoft",
+          "Yahoo",
+          "FPS",
+          "UI",
+          "URL",
+          "URI",
+          "URLs",
+          "URIs",
+          "Visual Studio Code"
+        ],
+        "code_blocks": false
+      }
+    },
+    "MD045": {
+      "aliases": [
+        "no-alt-text"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD046": {
+      "aliases": [
+        "code-block-style"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD047": {
+      "aliases": [
+        "single-trailing-newline"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD048": {
+      "aliases": [
+        "code-fence-style"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD049": {
+      "aliases": [
+        "emphasis-style"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD050": {
+      "aliases": [
+        "strong-style"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD051": {
+      "aliases": [
+        "link-fragments"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD052": {
+      "aliases": [
+        "reference-links-images"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD053": {
+      "aliases": [
+        "link-image-reference-definitions"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD054": {
+      "aliases": [
+        "link-image-style"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD055": {
+      "aliases": [
+        "table-pipe-style"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD056": {
+      "aliases": [
+        "table-column-count"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD058": {
+      "aliases": [
+        "blanks-around-tables"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD059": {
+      "aliases": [
+        "descriptive-link-text"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    },
+    "MD060": {
+      "aliases": [
+        "table-column-style"
+      ],
+      "enabled": true,
+      "severity": "error",
+      "options": {}
+    }
+  }
+}

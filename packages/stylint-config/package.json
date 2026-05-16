@@ -1,0 +1,29 @@
+{
+  "name": "stylint-config",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "homepage": "https://github.com/kokihoo/FE_SPEC#readme",
+  "bugs": {
+    "url": "https://github.com/kokihoo/FE_SPEC/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kokihoo/FE_SPEC.git"
+  },
+  "license": "ISC",
+  "author": "H <loviahoohoo@163.com>",
+  "main": "lib/stylint-config.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "node ./__tests__/stylint-config.test.js"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmmirror.com"
+  }
+}

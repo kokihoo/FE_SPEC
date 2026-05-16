@@ -1,0 +1,34 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^21.0.1",
+    "conventional-changelog": "^7.2.0",
+    "husky": "^9.1.7",
+    "lerna": "^9.0.7",
+    "markdownlint": "^0.40.0",
+    "markdownlint-cli2": "^0.22.1",
+    "vitepress": "2.0.0-alpha.17"
+  },
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install",
+    "init": "pnpm install",
+    "clean": "lerna clean && rm -rf node_modules",
+    "test": "lerna run test",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "deploy": "bash deploy.sh",
+    "publish": "lerna publish",
+    "lint": "markdownlint README.md",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
