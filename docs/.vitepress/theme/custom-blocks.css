@@ -1,0 +1,76 @@
+/**
+ * 规范用语自定义块（::: 推荐 / ::: 强制）
+ *
+ * 配色刻意避开内置块，便于同页混排时一眼区分：
+ * - tip / note → 品牌靛蓝 (--vp-c-tip-soft)
+ * - warning    → 琥珀黄 (--vp-c-warning-soft)
+ * - danger     → 红色 (--vp-c-danger-soft)
+ * - 推荐       → 绿色 success（良好实践）
+ * - 强制       → 紫色 important（必须遵守）
+ */
+
+:root {
+  --vp-custom-block-recommend-border: transparent;
+  --vp-custom-block-recommend-text: var(--vp-c-text-1);
+  --vp-custom-block-recommend-bg: var(--vp-c-success-soft);
+  --vp-custom-block-recommend-code-bg: var(--vp-c-success-soft);
+
+  --vp-custom-block-mandatory-border: transparent;
+  --vp-custom-block-mandatory-text: var(--vp-c-text-1);
+  --vp-custom-block-mandatory-bg: var(--vp-c-important-soft);
+  --vp-custom-block-mandatory-code-bg: var(--vp-c-important-soft);
+}
+
+.custom-block.recommend {
+  border-color: var(--vp-custom-block-recommend-border);
+  color: var(--vp-custom-block-recommend-text);
+  background-color: var(--vp-custom-block-recommend-bg);
+}
+
+.custom-block.recommend .custom-block-title {
+  color: var(--vp-c-success-1);
+}
+
+.custom-block.recommend a,
+.custom-block.recommend code {
+  color: var(--vp-c-success-1);
+}
+
+.custom-block.recommend a:hover,
+.custom-block.recommend a:hover > code {
+  color: var(--vp-c-success-2);
+}
+
+.custom-block.recommend code {
+  background-color: var(--vp-custom-block-recommend-code-bg);
+}
+
+.custom-block.mandatory {
+  border-color: var(--vp-custom-block-mandatory-border);
+  color: var(--vp-custom-block-mandatory-text);
+  background-color: var(--vp-custom-block-mandatory-bg);
+}
+
+.custom-block.mandatory .custom-block-title {
+  color: var(--vp-c-important-1);
+}
+
+.custom-block.mandatory a,
+.custom-block.mandatory code {
+  color: var(--vp-c-important-1);
+}
+
+.custom-block.mandatory a:hover,
+.custom-block.mandatory a:hover > code {
+  color: var(--vp-c-important-2);
+}
+
+.custom-block.mandatory code {
+  background-color: var(--vp-custom-block-mandatory-code-bg);
+}
+
+/* 无标题时收紧上内边距（默认块为标题预留了空间） */
+.custom-block.recommend:not(:has(.custom-block-title)),
+.custom-block.mandatory:not(:has(.custom-block-title)) {
+  padding: 12px 16px;
+}
