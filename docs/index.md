@@ -3,13 +3,13 @@
 layout: home
 
 hero:
-  name: "FE-SPEC"
+  # name: "FE-SPEC"
   text: "前端编码规范工程化"
-  tagline: My great project tagline
+  # tagline: My great project tagline
   actions:
     - theme: brand
       text: 立刻进入 ——>
-      link: /markdown-examples
+      link: /guide/overview
     # - theme: alt
     #   text: API Examples
     #   link: /api-examples
