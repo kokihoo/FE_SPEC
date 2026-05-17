@@ -9,8 +9,8 @@
     "conventional-changelog": "^7.2.0",
     "husky": "^9.1.7",
     "lerna": "^9.0.7",
+    "markdown-it-container": "^4.0.0",
     "markdownlint": "^0.40.0",
-    "markdownlint-cli2": "^0.22.1",
     "vitepress": "2.0.0-alpha.17"
   },
   "scripts": {

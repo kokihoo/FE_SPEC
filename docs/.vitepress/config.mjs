@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { registerSpecContainers } from './markdown/register-containers.mjs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -6,6 +7,12 @@ export default defineConfig({
   description: '前端编码规范工程化',
   base: '/FE_SPEC/',
   lang: 'zh-CN',
+
+  markdown: {
+    config(md) {
+      registerSpecContainers(md)
+    },
+  },
 
   themeConfig: {
     nav: [
