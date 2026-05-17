@@ -233,3 +233,5 @@ pnpm add conventional-changelog-conventionalcommits --save-dev
     - pnpm run docs:build
     - 部署 docs/.vitepress/dist
   ```
+
+  以上已设置完成，接下就是整理规范
