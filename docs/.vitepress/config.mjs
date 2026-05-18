@@ -33,6 +33,7 @@ export default defineConfig({
         activeMatch: '^/commit/',
         items: [
           { text: 'Git', link: '/commit/git' },
+          { text: '分支协作', link: '/commit/branch-collaboration' },
           { text: 'Changelog', link: '/commit/changelog' },
         ],
       },
@@ -71,6 +72,7 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: 'Git', link: '/commit/git' },
+            { text: '分支协作', link: '/commit/branch-collaboration' },
             { text: 'Changelog', link: '/commit/changelog' },
           ],
         },
@@ -112,6 +114,7 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: 'Git 提交', link: '/commit/git' },
+            { text: '分支协作', link: '/commit/branch-collaboration' },
             { text: 'Markdown 文档', link: '/md/markdown' },
             { text: 'CLI 集成', link: '/npm/cli' },
           ],
