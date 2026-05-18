@@ -199,7 +199,7 @@ CHANGELOG.md
 
 
 ::: 推荐
-2.6. 更新类型 `type` 与 Git message header 中的 [`type`](./1.git.md#1.3.1-type) 相关联，可以不一一对应
+2.6. 更新类型 `type` 与 Git message header 中的 [`type`]相关联，可以不一一对应
 :::
 
 
@@ -264,4 +264,3 @@ CHANGELOG.md
 - [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog/blob/master/packages/conventional-changelog/CHANGELOG.md)
 - [Angular Changelog](https://github.com/angular/angular.js/blob/master/CHANGELOG.md)
 - [Ant Design Changelog](https://github.com/ant-design/ant-design/blob/master/CHANGELOG.zh-CN.md)
-

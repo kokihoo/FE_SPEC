@@ -4,3 +4,5 @@ node_modules/
 /*.md
 !/README.md
 !/guide.md
+
+docs/.vitepress/dist/
