@@ -94,23 +94,23 @@ subject 用来概括和描述本次提交的改动内容，需注意以下几点
 
 1. 时态方面使用一般现在时，不要使用过去时。虽然查看 `message` 时，`message` 内容本身都发生在过去，然而对于主题来说，使用现在时的时态更简洁明确，并且更易达成一致性：
 
-   ```
+```
    // good
    docs: delete redundant docs
 
    // bad
    docs: deleted redundant docs
-   ```
+```
 
 2. 句式使用祈使句。即一般情况不要增加主语。因为在绝大情况下，主语都是作者『我』：
 
-   ```
+```
    // good
    docs: delete redundant docs
 
    // bad
    docs: i delete redundant docs
-   ```
+```
 
 3. 句首无需大写，句尾无需结束标点。因为主题（或标题）本身不用形成完整的句子：
 
@@ -120,7 +120,7 @@ subject 用来概括和描述本次提交的改动内容，需注意以下几点
 
   // bad
   docs: Delete redundant docs.
-  ```
+```
 
 ### message body
 
