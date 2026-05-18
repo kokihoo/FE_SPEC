@@ -17,14 +17,14 @@
 ### 缩进
 
 
-::: 强制
+::: 强制 #
 使用 2 个空格缩进。`eslint`: [indent](https://eslint.org/docs/rules/indent)
 :::
 
 
 统一使用 2 个空格缩进，不要使用 4 个空格或 tab 缩进：
 
-  ```javascript
+```javascript
 // x
 function foo() {
 ∙∙∙∙let name;
@@ -34,13 +34,13 @@ function foo() {
 function foo() {
 ∙∙let name;
 }
-  ```
+```
 
 
 ### 分号
 
 
-::: 强制
+::: 强制 #
 使用分号。`eslint`: [semi](https://eslint.org/docs/rules/semi)
 :::
 
@@ -49,7 +49,7 @@ function foo() {
 
 > 自动分号插入机制（即 [Automatic Semicolon Insertion](https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion)，简称 ASI） 是当 JS 遇到不带分号的语句时判断是否自动添加分号的机制，它在个别情况下的行为比较怪异，可能导致意想不到的效果。此外随着 JS 新特性的增加，异常的情况可能变得更加复杂。
 
-  ```javascript
+```javascript
 // x - 导致 Uncaught ReferenceError 报错
 const test1 = {}
 const test2 = {}
@@ -82,18 +82,18 @@ function foo() {
 function foo() {
     return 'Result want to be returned';
 }
-  ```
+```
 
 
 ### 逗号
 
 
-::: 强制
+::: 强制 #
 对于逗号分隔的多行结构，不使用行首逗号。`eslint`: [comma-style](https://eslint.org/docs/rules/comma-style)
 :::
 
 
-  ```javascript
+```javascript
 // x
 const story = [
       once
@@ -121,17 +121,17 @@ const hero = {
     lastName: 'Lovelace',
     superPower: 'computers',
 };
-  ```
+```
 
 
-::: 强制
+::: 强制 #
 对于逗号分隔的多行结构，始终加上最后一个逗号。`eslint`: [comma-dangle](https://eslint.org/docs/rules/comma-dangle)
 :::
 
 
 这样可以使增删行更加容易，也会使 `git diffs` 更清晰。`Babel` 等编译器会在编译后的代码里帮我们去掉最后额外的逗号，因此不必担心在旧浏览器中的问题。
 
-  ```diff
+```diff
 // x - 没有结尾逗号时，新增一行的 git diff 示例
 const hero = {
        firstName: 'Florence',
@@ -146,9 +146,9 @@ const hero = {
        lastName: 'Nightingale',
   +    inventorOf: ['coxcomb chart', 'modern nursing'],
 };
-  ```
+```
 
-  ```javascript
+```javascript
 // x
 const hero = {
     firstName: 'Dana',
@@ -208,7 +208,7 @@ function createHero(
 ) {
     // ...
 }
-  ```
+```
 
 
 ### 块
@@ -216,14 +216,14 @@ function createHero(
 
 > 术语解释：**块（block）** 可以理解为类、函数、控制语句等由大括号 `{}` 分隔的代码块状结构，由一对大括号界定，用于组合若干条语句 [了解更多](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block)
 
-::: 推荐
+::: 推荐 #
 始终使用大括号包裹代码块。eslint: [curly](https://eslint.org/docs/rules/curly) [nonblock-statement-body-position](https://eslint.org/docs/rules/nonblock-statement-body-position)
 :::
 
 
 多行代码块必须用大括号包裹：
 
-  ```javascript
+```javascript
 // x
 if (foo) 
   bar();
@@ -234,11 +234,11 @@ if (foo) {
     bar();
     baz();
 }
-  ```
+```
 
 代码块只有一条语句时，可以省略大括号，并跟控制语句写在同一行。但出于一致性和可读性考虑，不推荐这样做：
 
-  ```javascript
+```javascript
 // x
 if (foo) 
   return false;
@@ -250,12 +250,12 @@ if (foo) return false;
 if (foo) {
     return false;
 }
-  ```
+```
 
 #### 大括号换行风格
 
 
-::: 强制
+::: 强制 #
 对于非空代码块，采用 `Egyptian Brackets` 风格。eslint: [brace-style](https://eslint.org/docs/rules/brace-style)
 :::
 
@@ -283,10 +283,10 @@ if (foo) {
 } else {
     thing2();
 }
- ```
+```
 
-:::推荐
-【参考】对于空代码块，可以将大括号直接闭合。
+::: 参考 #
+对于空代码块，可以将大括号直接闭合。
 :::
 
 对于空的代码块，且不在类似 `if..else..` 或 `try..catch..finally..` 的多块结构中时，可以立即将大括号闭合：
@@ -324,17 +324,17 @@ try {
   // …
 } catch (e) {   
 }
-  ```
+```
 
 
-::: 强制
+::: 强制 #
 不要使用空代码块。`eslint`: [no-empty](https://eslint.org/docs/rules/no-empty)
 :::
 
 
 不要让代码中出现空代码块，这会使阅读者感到困惑。如果必须使用空块，需在块内写明注释。
 
-  ```javascript
+```javascript
 // x
 if (condition) {
     thing1();
@@ -347,7 +347,7 @@ if (condition) {
 } else {
     // TODO I haven’t determined what to do.
 }
-  ```
+```
 
 
 ### 空格
@@ -355,7 +355,7 @@ if (condition) {
 
 合理并一致地使用空格有助于提升代码的可读性和可维护性。具体来说，我们采用如下的空格风格：
 
-::: 强制
+::: 强制 #
 空格风格。`eslint`: [space-before-blocks](https://eslint.org/docs/rules/space-before-blocks) [keyword-spacing](https://eslint.org/docs/rules/keyword-spacing) [space-in-parens](https://eslint.org/docs/rules/space-in-parens) [array-bracket-spacing](https://eslint.org/docs/rules/array-bracket-spacing) [object-curly-spacing](https://eslint.org/docs/rules/object-curly-spacing) [space-infix-ops](https://eslint.org/docs/rules/space-infix-ops) [key-spacing](https://eslint.org/docs/rules/key-spacing)
 :::
 
@@ -384,7 +384,7 @@ dog.set('attr', {
     age: '1 year',
     breed: 'Bernese Mountain Dog',
 });
-  ```
+```
 
 控制语句（`if`、`while` 等）的左小括号 `(` 前有一个空格：
 
@@ -436,7 +436,7 @@ if ( foo ) {
 if (foo) {
   console.log(foo);
 }
- ```
+```
 
 方括号内部两侧无空格：
 
@@ -480,11 +480,11 @@ const x = ! y;
 
 // √
 const x = !y;
-  ```
+```
 
 定义对象字面量时， `key`, `value` 之间有且只有一个空格，不允许所谓的「水平对齐」：
 
-  ```javascript
+```javascript
 // x
 {
     a:            'short',
@@ -502,13 +502,13 @@ const x = !y;
     a: 'short',
     looooongname: 'long',
 }
-  ```
+```
 
 
 ### 空行
 
 
-::: 推荐
+::: 推荐 #
 在文件末尾保留一行空行。`eslint`: [eol-last](https://eslint.org/docs/rules/eol-last)
 :::
 
@@ -536,12 +536,12 @@ export default foo;↵
 ```
 
 
-::: 强制
+::: 强制 #
 块的开始和结束不能是空行。`eslint`: [padded-blocks](https://eslint.org/docs/rules/padded-blocks)
 :::
 
 
-  ```javascript
+```javascript
 // x
 function bar() {
 
@@ -571,11 +571,11 @@ if (baz) {
 }
 ```
 
-:::推荐
-【参考】在块末和新语句间插入一个空行。
+::: 参考 #
+在块末和新语句间插入一个空行。
 :::
 
- ```javascript
+```javascript
 // x
 if (foo) {
     return bar;
@@ -615,7 +615,7 @@ return obj;
 ### 最大字符数和最大行数
 
 
-::: 推荐
+::: 推荐 #
 单行最大字符数：100。`eslint`: [max-len](https://eslint.org/docs/rules/max-len)
 :::
 
@@ -653,16 +653,16 @@ $.ajax({
 ```
 
 
-:::推荐
-【参考】文件最大行数：1000。`eslint`: [max-lines](https://eslint.org/docs/rules/max-lines)
+::: 参考 #
+文件最大行数：1000。`eslint`: [max-lines](https://eslint.org/docs/rules/max-lines)
 :::
 
 
 过长的文件不易阅读和维护，最好对其进行拆分。
 
 
-:::推荐
-【参考】函数最大行数：80。`eslint`: [max-lines-per-function](https://eslint.org/docs/rules/max-lines-per-function)
+::: 参考 #
+函数最大行数：80。`eslint`: [max-lines-per-function](https://eslint.org/docs/rules/max-lines-per-function)
 :::
 
 
@@ -675,7 +675,7 @@ $.ajax({
 ### 变量声明
 
 
-::: 强制
+::: 强制 #
 使用 `const` 或 `let` 声明变量。`eslint`: [no-var](https://eslint.org/docs/rules/no-var) [no-undef](https://eslint.org/docs/rules/no-undef)
 :::
 
@@ -705,7 +705,7 @@ const foo = 'foo';
 ```
 
 
-::: 强制
+::: 强制 #
 正确地使用 `const` 和 `let`。`eslint`: [prefer-const](https://eslint.org/docs/rules/prefer-const)
 :::
 
@@ -723,7 +723,7 @@ let flag = true;
 if (flag) {
     flag = false;
 }
-  ```
+```
 
 需注意，数组和对象是一个引用，对数组某项和对象某属性的修改并不是重新赋值，因此多数情况下应用 `const` 声明：
 
@@ -741,13 +741,13 @@ arr.push('foo');
 obj.name = 'bar';
 ```
 
-::: 强制
+::: 强制 #
 一条声明语句声明一个变量。`eslint`: [one-var](https://eslint.org/docs/rules/one-var)
 :::
 
 这样做更易于追加新的声明语句（你不需要总去把最后的 `;` 改成 `,` 了），也更易于进行单步调试。
 
-  ```javascript
+```javascript
 // x
 const foo = 1,
     bar = 2;
@@ -755,17 +755,17 @@ const foo = 1,
 // √
 const foo = 1;
 const bar = 2;
-  ```
+```
 
 
-::: 强制
+::: 强制 #
 声明的变量必须被使用。`eslint`: [no-unused-vars](https://eslint.org/docs/rules/no-unused-vars)
 :::
 
 
 声明而未使用的变量、表达式可能带来潜在的问题，也会给维护者造成困扰，应将它们删除。
 
-  ```javascript
+```javascript
 // x - 未使用变量 foo
 const foo = 1;
 
@@ -793,10 +793,10 @@ function getX(x, y) {
 function getXPlusY(x, y) {
     return x + y;
 }
-  ```
+```
 
 
-::: 强制
+::: 强制 #
 不要在声明前就使用变量。`eslint`: [no-use-before-define](https://eslint.org/docs/rules/no-use-before-define)
 :::
 
@@ -826,8 +826,8 @@ console.log(foo); // => foo
 ```
 
 
-:::推荐
-【参考】哪里使用，哪里声明。
+::: 参考 #
+哪里使用，哪里声明。
 :::
 
 
@@ -865,10 +865,10 @@ function getData(id) {
 
     return data;
 }
-  ```
+```
 
 
-::: 强制
+::: 强制 #
 变量不要与外层作用域已存在的变量同名。`eslint`: [no-shadow](https://eslint.org/docs/rules/no-shadow)
 :::
 
@@ -890,16 +890,16 @@ if (someCondition) {
   console.log(bar); // => 2
   console.log(foo); // => 1
 }
-  ```
+```
 
-::: 强制
+::: 强制 #
 不要重复声明变量和函数。`eslint`: [no-redeclare](https://eslint.org/docs/rules/no-redeclare)
 :::
 
 
 在 `ES5` 中，尽管使用 `var` 重复声明不会报错，但这样做会令人疑惑，降低程序的可维护性。同理，函数的声明也不要与已存在的变量和函数重名：
 
- ```javascript
+```javascript
 // x
 var a = 'foo';
 var a = 'bar';
@@ -954,7 +954,7 @@ myFunc('bar'); // => 'bar'
 ```
 
 
-::: 强制
+::: 强制 #
 禁止连续赋值。`eslint`: [no-multi-assign](https://eslint.org/docs/rules/no-multi-assign)
 :::
 
@@ -984,14 +984,14 @@ console.log(c); // throws ReferenceError
 ```
 
 
-：：：推荐
-【参考】将 `let` 和 `const` 分别归类。
+::: 参考 #
+将 `let` 和 `const` 分别归类。
 :::
 
 
 将 `let` 和 `const` 归类写在一起，可以提高代码整洁性。此外，如果你想按变量的含义排序分组也是允许的。
 
- ```javascript
+```javascript
 // bad
 let a;
 const b = 2;
@@ -1013,7 +1013,7 @@ let e;
 
 > `JS`的数据类型包括 7 种原始类型（primitive type），即 `Boolean`, `Null`, `Undefined`, `Number`, `String`, `Symbol` (ES6 新定义), `BigInt`（ES11 新定义），以及 `Object` 类型，[了解更多](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)。这个章节主要介绍原始类型相关的规范。
 
-::: 强制
+::: 强制 #
 不要使用 `new Number/String/Boolean`。`eslint`: [no-new-wrappers](https://eslint.org/docs/rules/no-new-wrappers)
 :::
 
@@ -1047,7 +1047,7 @@ if (bool) {
 ```
 
 
-::: 推荐
+::: 推荐 #
 类型转换。【数字】使用 `Number()` 或 `parseInt()` 
 :::
 
@@ -1066,7 +1066,7 @@ const num = Number(str);
 const num = parseInt(str, 10);
 ```
 
-::: 推荐
+::: 推荐 #
 类型转换。【字符串】使用 `String()`
 :::
 
@@ -1082,7 +1082,7 @@ const str = num.toString(); // isn’t guaranteed to return a string
 const str = String(num);
 ```
 
-::: 推荐
+::: 推荐 #
 类型转换。【布尔值】使用 `!!`
 :::
 
@@ -1098,7 +1098,7 @@ const hasAge = !!age;
 ```
 
 
-::: 推荐
+::: 推荐 #
 使用 `parseInt()` 方法时总是带上基数。`eslint`: [radix](https://eslint.org/docs/rules/radix)
 :::
 
@@ -1121,7 +1121,7 @@ parseInt('071'); // => ES5 前的执行环境中得到的是 57
 parseInt('071', 10); // => 71
 ```
 
-::: 强制
+::: 强制 #
 避免不必要的布尔类型转换。`eslint`: [no-extra-boolean-cast](https://eslint.org/docs/rules/no-extra-boolean-cast)
 :::
 
@@ -1153,7 +1153,7 @@ const a = flag ? b : c;
 
 #### 2.2.5. 字符串
 
-::: 强制
+::: 强制 #
 字符串优先使用单引号。`eslint`: [quotes](https://eslint.org/docs/rules/quotes)
 :::
 
@@ -1168,7 +1168,7 @@ const name = 'tod';
 ```
 
 
-::: 推荐
+::: 推荐 #
 使用模板字符串替代字符串拼接。eslint: [prefer-template](https://eslint.org/docs/rules/prefer-template)
 :::
 
@@ -1185,10 +1185,10 @@ function getDisplayName({ nickName, realName }) {
 function getDisplayName({ nickName, realName }) {
   return `${nickName} (${realName})`;
 }
-  ```
+```
 
 
-::: 强制
+::: 强制 #
 禁止不必要的转义字符。[no-useless-escape](https://eslint.org/docs/rules/no-useless-escape)
 :::
 
@@ -1205,7 +1205,7 @@ const foo = `'this' is "quoted"`;
 
 ### 数组
 
-::: 强制
+::: 强制 #
 使用字面量创建数组。`eslint`: [no-array-constructor](https://eslint.org/docs/rules/no-array-constructor)
 :::
 
@@ -1223,7 +1223,7 @@ const b = new Array(500); // 构造长度为 500 的空数组
 ```
 
 
-::: 强制
+::: 强制 #
 某些数组方法的回调函数中必须包含 `return` 语句。`eslint`: [array-callback-return](https://eslint.org/docs/rules/array-callback-return)
 :::
 
@@ -1250,7 +1250,7 @@ myArray.forEach((item, index) => {
 
 某些方法漏掉 `return` 还可能引起错误：
 
-  ```javascript
+```javascript
 // 欲将 ['a', 'b', 'c'] 转换成 {a: 0, b: 1, c: 2}
 const myArray = ['a', 'b', 'c'];
 
@@ -1267,7 +1267,7 @@ const myObj = myArray.reduce((memo, item, index) => {
 ```
 
 
-::: 推荐
+::: 推荐 #
 使用扩展运算符 `...` 处理数组。
 :::
 
@@ -1337,7 +1337,7 @@ const baz = Array.from(foo, bar);
 ```
 
 
-::: 推荐
+::: 推荐 #
 使用解构获取数组元素。
 :::
 
@@ -1375,7 +1375,7 @@ const { left, top } = giveMeDivPosition(div);
 ### 对象
 
 
-::: 强制
+::: 强制 #
 使用字面量创建对象。`eslint`: [no-new-object](https://eslint.org/docs/rules/no-new-object)
 :::
 
@@ -1389,7 +1389,7 @@ const obj = {};
 ```
 
 
-::: 强制
+::: 强制 #
 使用对象属性和方法的简写语法。`eslint`: [object-shorthand](https://eslint.org/docs/rules/object-shorthand)
 :::
 
@@ -1417,8 +1417,8 @@ const atom = {
 ```
 
 
-:::推荐
-【参考】将对象的简写属性写在一起。
+::: 参考 #
+将对象的简写属性写在一起。
 :::
 
 
@@ -1450,7 +1450,7 @@ const obj = {
 ```
 
 
-::: 强制
+::: 强制 #
 对象的属性名不要用引号包裹，除非包含特殊字符。`eslint`: [quote-props](https://eslint.org/docs/rules/quote-props)
 :::
 
@@ -1475,7 +1475,7 @@ const good = {
 ```
 
 
-::: 强制
+::: 强制 #
 优先使用 . 访问对象的属性。`eslint`: [dot-notation](https://eslint.org/docs/rules/dot-notation)
 :::
 
@@ -1499,7 +1499,7 @@ const bar = obj['data-bar'];
 ```
 
 
-::: 推荐
+::: 推荐 #
 使用扩展运算符 `...` 处理对象。
 :::
 
@@ -1530,13 +1530,13 @@ const { a, ...noA } = copy; // noA => { b: 2, c: 3 }
 ```
 
 
-::: 推荐
+::: 推荐 #
 使用解构获取对象属性。eslint: [prefer-destructuring](https://eslint.org/docs/rules/prefer-destructuring)
 :::
 
 获取对象的同名属性、多个属性时，使用解构让代码更简洁，也可以减少为了使用属性而创建的临时引用。
 
-  ```javascript
+```javascript
 // bad
 function getFullName(user) {
     const firstName = user.firstName;
@@ -1558,8 +1558,8 @@ function getFullName({ firstName, lastName }) {
 ```
 
 
-:::推荐
-【参考】对象的动态属性名应直接写在字面量定义中。
+::: 参考 #
+对象的动态属性名应直接写在字面量定义中。
 :::
 
 
@@ -1586,7 +1586,7 @@ const obj = {
 ```
 
 
-::: 强制
+::: 强制 #
 不要直接在对象上调用 `Object.prototypes` 上的方法。`eslint`: [no-prototype-builtins](https://eslint.org/docs/rules/no-prototype-builtins)
 :::
 
@@ -1613,7 +1613,7 @@ console.log(Object.prototype.hasOwnProperty.call(objNull, 'foo'));
 
 ### 函数
 
-::: 强制
+::: 强制 #
 不要用 Function 构造函数创建函数。`eslint`: [no-new-func](https://eslint.org/docs/rules/no-new-func)
 :::
 
@@ -1629,7 +1629,7 @@ const sum = (a, b) => a + b;
 ```
 
 
-::: 强制
+::: 强制 #
 不要在块中使用函数声明。`eslint`: [no-inner-declarations](https://eslint.org/docs/rules/no-inner-declarations)
 :::
 
@@ -1664,8 +1664,8 @@ test(); // => test
 ```
 
 
-:::推荐
-【参考】使用函数表达式替代函数声明。
+::: 参考 #
+使用函数表达式替代函数声明。
 :::
 
 这样可以保证函数不能在定义前被调用。
@@ -1695,14 +1695,14 @@ const foo = function foo_more_descriptive_name() {
 ```
 
 
-::: 强制
+::: 强制 #
 使用箭头函数代替匿名函数。`eslint`: [prefer-arrow-callback](https://eslint.org/docs/rules/prefer-arrow-callback)
 :::
 
 
 `ES6` 提供的箭头函数可以解决 `this` 指向的问题，而且语法更简洁。
 
-  ```javascript
+```javascript
 // bad
 [1, 2, 3].map(function (x) {
     const y = x + 1;
@@ -1716,7 +1716,7 @@ const foo = function foo_more_descriptive_name() {
 });
 ```
 
-::: 推荐
+::: 推荐 #
 箭头函数编码风格。`eslint`: [arrow-parens](https://eslint.org/docs/rules/arrow-parens) [arrow-body-style](https://eslint.org/docs/rules/arrow-body-style)
 :::
 
@@ -1728,7 +1728,7 @@ const foo = function foo_more_descriptive_name() {
 
     我们推荐使用这个 ES6 提供的语法糖，它可以让书写和阅读更简洁。但你也可以选择始终加上大括号和 `return`，以方便后续在函数体内增加语句。
 
-    ```javascript
+```javascript
     // good - 函数体包含多条语句时，始终加上大括号
     [1, 2, 3].map((number) => {
       const nextNumber = number + 1;
@@ -1742,11 +1742,11 @@ const foo = function foo_more_descriptive_name() {
     [1, 2, 3].map((number) => {
       return `A string containing the ${number + 1}.`;
     });
-    ```
+```
 
     当 `return` 的内容为对象或者有多行时，需要用小括号包裹：
 
-    ```javascript
+```javascript
     // bad - Uncaught SyntaxError: Unexpected token
     [1, 2, 3].map((item) => {
       foo: item,
@@ -1773,7 +1773,7 @@ const foo = function foo_more_descriptive_name() {
         httpMethod,
       )
     ));
-    ```
+```
 
 - 函数参数风格
 
@@ -1781,7 +1781,7 @@ const foo = function foo_more_descriptive_name() {
 
     我们建议仅在这种情况下省略包裹参数的小括号，其余情况都不要省略小括号。但你也可以选择始终加上小括号，以方便后续可能要增加参数。
 
-    ```javascript
+```javascript
     // good - 未使用 return 简写语法时，参数始终加上小括号
     [1, 2, 3].map((number) => {
       const nextNumber = number + 1;
@@ -1793,17 +1793,17 @@ const foo = function foo_more_descriptive_name() {
 
     // good - 也可以选择始终不省略参数的小括号，以方便后续可能要增加参数
     [1, 2, 3].map((x) => x * x);
-    ```
+```
 
 
-::: 强制
-2.5.6. 不要将函数参数命名为 `arguments。`
+::: 强制 #
+不要将函数参数命名为 `arguments。`
 :::
 
 
 这会覆盖掉函数作用域中的 `arguments` 对象。
 
-  ```javascript
+```javascript
 // bad
 function foo(name, options, arguments) {
     // ...
@@ -1813,11 +1813,11 @@ function foo(name, options, arguments) {
 function foo(name, options, args) {
     // ...
 }
-  ```
+```
 
 
-::: 强制
-2.5.7. 不要使用 `arguments` 对象。`eslint`: [prefer-rest-params](https://eslint.org/docs/rules/prefer-rest-params)
+::: 强制 #
+不要使用 `arguments` 对象。`eslint`: [prefer-rest-params](https://eslint.org/docs/rules/prefer-rest-params)
 :::
 
 
@@ -1825,7 +1825,7 @@ function foo(name, options, args) {
 
 `ES6` 提供了 `rest` 操作符 `...`，与 `arguments` 相比可以更清晰地聚合函数的剩余参数。此外， `...` 得到的是一个真正的数组，而 `arguments` 得到的则是类数组结构。
 
-  ```javascript
+```javascript
 // bad
 function foo(a, b) {
     const args = Array.prototype.slice.call(arguments, foo.length);
@@ -1838,11 +1838,11 @@ function foo(a, b, ...args) {
     console.log(args);
 }
 foo(1, 2, 3, 4); // => [3, 4]
-  ```
+```
 
 
-::: 推荐
-2.5.8. 使用默认参数语法。
+::: 推荐 #
+使用默认参数语法。
 :::
 
 
@@ -1850,7 +1850,7 @@ foo(1, 2, 3, 4); // => [3, 4]
 
 因此，当函数参数需要默认值时，使用默认参数语法，而不是去修改参数：
 
-  ```javascript
+```javascript
 // bad
 const multiple = (a, b) => {
     a = a || 0;
@@ -1862,17 +1862,17 @@ const multiple = (a, b) => {
 const multiple = (a = 0, b = 0) => {
     return a * b;
 };
-  ```
+```
 
 
-::: 推荐
-2.5.9. 有默认值的函数参数需要放到参数列表的最后。
+::: 推荐 #
+有默认值的函数参数需要放到参数列表的最后。
 :::
 
 
 否则你将无法享受到默认参数的便利，只能通过传 `undefined` 触发参数使用默认值。
 
-  ```javascript
+```javascript
 // bad
 function multiply(a = 1, b) {
     return a * b;
@@ -1885,17 +1885,17 @@ function multiply(a, b = 1) {
     return a * b;
 }
 const x = multiply(42); // => 42
-  ```
+```
 
 
-::: 推荐
-2.5.10. 不要修改函数参数。`eslint`: [no-param-reassign](https://eslint.org/docs/rules/no-param-reassign)
+::: 推荐 #
+不要修改函数参数。`eslint`: [no-param-reassign](https://eslint.org/docs/rules/no-param-reassign)
 :::
 
 
 不要修改引用类型的参数，这可能导致作为入参的原变量发生变化：
 
-  ```javascript
+```javascript
 // bad
 const f1 = function f1(obj) {
     obj.key = 1;
@@ -1908,11 +1908,11 @@ console.log(originalObj); // => { key: 1 }
 const f2 = function f2(obj) {
     const key = Object.prototype.hasOwnProperty.call(obj, 'key') ? obj.key : 1;
 };
-  ```
+```
 
 更不要给参数重新赋值，这可能导致意外的行为和内核优化问题：
 
-  ```javascript
+```javascript
 // bad
 function foo(bar, baz) {
     if (!baz) {
@@ -1927,24 +1927,26 @@ function foo(bar, baz) {
       qux = 1;
     }
 }
-  ```
+```
 
 
-::: 强制
-2.5.11. 将立即执行函数表达式（`IIFE`）用小括号包裹。`eslint`: [wrap-iife](https://eslint.org/docs/rules/wrap-iife)
+::: 强制 #
+将立即执行函数表达式（`IIFE`）用小括号包裹。`eslint`: [wrap-iife](https://eslint.org/docs/rules/wrap-iife)
 :::
 
 
 `IIFE` 是一个独立的执行单元，将它用小括号包裹可以更清晰的体现这点。需要提醒的是，由于 `ES6` 模块语法的引入，你可能不再需要使用 `IIFE` 了。
 
-  ```javascript
+```javascript
 (function () {
     console.log('Welcome to the Internet. Please follow me.');
 })();
-  ```
+```
 
 
-2.5.12.【参考】函数的复杂度不应过高。`eslint`: [complexity](https://eslint.org/docs/rules/complexity)
+::: 参考 #
+函数的复杂度不应过高。`eslint`: [complexity](https://eslint.org/docs/rules/complexity)
+:::
 
 
 过高的复杂度意味着代码难以维护和测试。我们推荐函数的复杂度不要超过以下阈值：
@@ -1953,13 +1955,15 @@ function foo(bar, baz) {
 - 认知复杂度不超过 **15**
 
 
-2.5.13.【参考】函数的参数不应过多。`eslint`: [max-params](https://eslint.org/docs/rules/max-params)
+::: 参考 #
+函数的参数不应过多。`eslint`: [max-params](https://eslint.org/docs/rules/max-params)
+:::
 
 如果函数的参数过多，将不利于函数的维护和调用。这时你需要考虑是否函数做了太多的事情，是否有必要对其进行拆分。
 
 如果必须使用过多的参数，可以考虑用对象代替参数列表：
 
-  ```javascript
+```javascript
 // bad
 function doSomething(param1, param2, param3, param4, param5, param6, param7, param8) {
     // ...
@@ -1980,17 +1984,17 @@ doSomething({
     param7: 7,
     param8: 8,
 });
-  ```
+```
 
 
-::: 强制
-2.5.14. `generator` 函数内必须有 `yield` 语句。`eslint`: [require-yield](https://eslint.org/docs/rules/require-yield)
+::: 强制 #
+`generator` 函数内必须有 `yield` 语句。`eslint`: [require-yield](https://eslint.org/docs/rules/require-yield)
 :::
 
 
 如果一个 `generator` 中没有 `yield` 语句，那么这个 `generator` 就不是必须的。
 
-  ```javascript
+```javascript
 // bad
 function* foo() {
     return 10;
@@ -2001,17 +2005,19 @@ function* foo() {
     yield 5;
     return 10;
 }
-  ```
+```
 
 
-2.5.15.【参考】优先使用 JS 提供的高阶函数进行迭代运算。
+::: 参考 #
+优先使用 JS 提供的高阶函数进行迭代运算。
+:::
 
 
 需要迭代运算时，应优先使用 JS 提供的高阶函数，减少直接使用 `for` 循环（包括 `for-in` 和 `for-of`）。
 
 如使用 `map()` / `every()` / `filter()` / `find()` / `findIndex()` / `reduce()` / `some()` / ... 来迭代数组，使用 `Object.keys()` / `Object.values()` / `Object.entries()` 方法来迭代对象
 
-  ```javascript
+```javascript
 const numbers = [1, 2, 3, 4, 5];
 
 // bad
@@ -2046,20 +2052,20 @@ numbers.forEach((num) => {
 
 // best
 const increasedByOne = numbers.map((num) => num + 1);
-  ```
+```
 
 
 ### 类
 
 
-::: 推荐
-2.6.1. 使用 `class` 语句声明类，而不是使用 `prototype。`
+::: 推荐 #
+使用 `class` 语句声明类，而不是使用 `prototype。`
 :::
 
 
 `class` 语句是 `ES6` 中引入的用于声明类的语法糖，更加简洁易维护。
 
-  ```javascript
+```javascript
 // bad
 function Person() {
     this.age = 1;
@@ -2077,17 +2083,17 @@ class Person {
       this.age += 1;
     }
 }
-  ```
+```
 
 
-::: 推荐
-2.6.2. 使用 `extends` 语句进行类的继承。
+::: 推荐 #
+使用 `extends` 语句进行类的继承。
 :::
 
 
 `extends` 是用于原型继承的内建方法，不会破坏 `instanceof`。
 
-  ```javascript
+```javascript
 // bad
 const inherits = require('inherits');
 function PeekableQueue(contents) {
@@ -2104,17 +2110,17 @@ class PeekableQueue extends Queue {
       return this.queue[0];
     }
 }
-  ```
+```
 
 
-::: 强制
-2.6.3. 避免不必要的 constructor。
+::: 强制 #
+避免不必要的 constructor。
 :::
 
 
 ES6 class 会提供一个默认的 `constructor`，空 `constructor` 或者只调用父类的 `constructor` 是不必要的。eslint: [no-useless-constructor](https://eslint.org/docs/rules/no-useless-constructor)
 
-  ```javascript
+```javascript
 // bad - 以下两种 constructor 可以省略
 class Parent {
     constructor() {}
@@ -2146,18 +2152,18 @@ class Child extends Parent {
       // ...
     }
 }
-  ```
+```
 
 
-::: 强制
-2.6.4. 正确地使用 super 方法。eslint: [constructor-super](https://eslint.org/docs/rules/constructor-super) [no-this-before-super](https://eslint.org/docs/rules/no-this-before-super)
+::: 强制 #
+正确地使用 super 方法。eslint: [constructor-super](https://eslint.org/docs/rules/constructor-super) [no-this-before-super](https://eslint.org/docs/rules/no-this-before-super)
 :::
 
 
 - 子类的 `constructor` 中必须使用 `super()`，且必须在 `this` 和 `super` 关键词前调用
 - 非子类的 `constructor` 中不能使用 `super()`
 
-  ```javascript
+```javascript
 // bad - 非子类不能使用 super
 class Parent {
     constructor() {
@@ -2195,17 +2201,17 @@ class Child extends Parent {
       this.name = 'foo';
     }
 }
-  ```
+```
 
 
-::: 强制
-2.6.5. 避免重复的类成员命名。eslint: [no-dupe-class-members](https://eslint.org/docs/rules/no-dupe-class-members)
+::: 强制 #
+避免重复的类成员命名。eslint: [no-dupe-class-members](https://eslint.org/docs/rules/no-dupe-class-members)
 :::
 
 
 重复的类成员声明最终生效的将是最后一个：
 
-  ```javascript
+```javascript
 // bad
 class Foo {
     bar() {
@@ -2224,14 +2230,14 @@ class Foo {
       console.log('bar');
     }
 }
-  ```
+```
 
 
 ### 模块
 
 
-::: 推荐
-2.7.1. 使用 `ES6 modules` 而非其他非标准的模块系统。`eslint`: [import/module-systems](https://github.com/benmosher/eslint-plugin-import#module-systems)
+::: 推荐 #
+使用 `ES6 modules` 而非其他非标准的模块系统。`eslint`: [import/module-systems](https://github.com/benmosher/eslint-plugin-import#module-systems)
 :::
 
 
@@ -2239,7 +2245,7 @@ class Foo {
 
 `ES6 modules` 作为标准代表着未来，让我们拥抱未来吧。
 
-  ```javascript
+```javascript
 // bad
 const React = require('react');
 module.exports = React.Component;
@@ -2247,34 +2253,34 @@ module.exports = React.Component;
 // good
 import React, { Component } from 'react';
 export default Component;
-  ```
+```
 
 
-::: 强制
-2.7.2. 不要用多个 `import` 引入同一模块。`eslint`: [import/no-duplicates](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md)
+::: 强制 #
+不要用多个 `import` 引入同一模块。`eslint`: [import/no-duplicates](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md)
 :::
 
 
 多条 `import` 语句引入了同一模块会降低可维护性，你需要将它们合成一条语句。
 
-  ```javascript
+```javascript
 // bad
 import React from 'react';
 import { Component } from 'react';
 
 // good
 import React, { Component } from 'react';
-  ```
+```
 
 
-::: 强制
-2.7.3. import 语句需要放到模块的最上方。`eslint`: [import/first](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md)
+::: 强制 #
+import 语句需要放到模块的最上方。`eslint`: [import/first](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md)
 :::
 
 
 由于 `import` 语句会被声明提升，将它们放到模块的最上方以防止异常行为。
 
-  ```javascript
+```javascript
 // bad
 import foo from 'foo';
 foo.init();
@@ -2288,15 +2294,15 @@ import bar from 'bar';
 
 foo.init();
 bar.init();
-  ```
+```
 
 
-::: 强制
-2.7.4. 禁止 `default import` 的名字跟文件内的其他 `export` 命名相同。`eslint`: [import/no-named-as-default](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default.md)
+::: 强制 #
+禁止 `default import` 的名字跟文件内的其他 `export` 命名相同。`eslint`: [import/no-named-as-default](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default.md)
 :::
 
 
-  ```javascript
+```javascript
 // foo.js
 export default 'foo';
 export const bar = 'bar';
@@ -2306,25 +2312,25 @@ import bar from './foo.js';
 
 // good
 import foo from './foo.js';
-  ```
+```
 
 
-::: 强制
-2.7.5. 禁止引用自身。`eslint`: [import/no-self-import](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-self-import.md)
+::: 强制 #
+禁止引用自身。`eslint`: [import/no-self-import](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-self-import.md)
 :::
 
 
-::: 强制
-2.7.6. 禁止循环引用。`eslint`: [import/no-cycle](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-cycle.md)
+::: 强制 #
+禁止循环引用。`eslint`: [import/no-cycle](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-cycle.md)
 :::
 
 
-::: 推荐
-2.7.7. 不要在 default export 上使用一个已导出的名称作为属性。`eslint`: [import/no-named-as-default-member](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default-member.md)
+::: 推荐 #
+不要在 default export 上使用一个已导出的名称作为属性。`eslint`: [import/no-named-as-default-member](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default-member.md)
 :::
 
 
-  ```javascript
+```javascript
 // foo.js
 export default 'foo';
 export const bar = 'bar';
@@ -2336,15 +2342,15 @@ const { bar } = foo;
 
 // good
 import foo, { bar } from './foo.js';
-  ```
+```
 
 
-::: 推荐
-2.7.8. 在模块导入之后保留一个空行。`eslint`: [import/newline-after-import](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md)
+::: 推荐 #
+在模块导入之后保留一个空行。`eslint`: [import/newline-after-import](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md)
 :::
 
 
-  ```javascript
+```javascript
 // bad
 import foo from './foo.js';
 const FOO = 'FOO';
@@ -2353,10 +2359,12 @@ const FOO = 'FOO';
 import foo from './foo.js';
 
 const FOO = 'FOO';
-  ```
+```
 
 
-2.7.9.【参考】import 语句的排序。`eslint`: [import/order](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md)
+::: 参考 #
+import 语句的排序。`eslint`: [import/order](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md)
+:::
 
 
 `import` 语句建议按以下规则排序：
@@ -2364,7 +2372,7 @@ const FOO = 'FOO';
 - 先 `import` 第三方模块，再 `import` 自己工程里的模块
 - 先 `import` 绝对路径，再 `import` 相对路径
 
-  ```javascript
+```javascript
 // bad
 import foo from 'components/foo';
 import './index.scss';
@@ -2374,29 +2382,33 @@ import React from 'react';
 import React from 'react';
 import foo from 'components/foo';
 import './index.scss';
-  ```
+```
 
 
-2.7.10.【参考】当模块内只有一个 `export` 时，使用 `default export`。`eslint`: [import/prefer-default-export](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md)
+::: 参考 #
+当模块内只有一个 `export` 时，使用 `default export`。`eslint`: [import/prefer-default-export](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md)
+:::
 
 
 我们也建议文件内只包含一个 export，这有利于代码的可维护性。
 
-  ```javascript
+```javascript
 // bad
 export function foo() {}
 
 // good
 export default function foo() {}
-  ```
+```
 
 
-2.7.11.【参考】不要在 `import` 时直接 `export。`
+::: 参考 #
+不要在 `import` 时直接 `export。`
+:::
 
 
 虽然一行代码更简洁，但这不利于代码的可读性和一致性。
 
-  ```javascript
+```javascript
 // bad
 export { Com as Component } from 'react';
 
@@ -2404,10 +2416,12 @@ export { Com as Component } from 'react';
 import { Component } from 'react';
 
 export default Component;
-  ```
+```
 
 
-2.7.12.【参考】模块开发者选择 EMS 和 CJS 时，需要判断运行时环境：如果你的模块是只面向浏览器的则选择 ESM；如果你的模块是只面向 Node.js 的则选择 CJS，并且确定遵循[CJS 命名空间规则](https://nodejs.org/api/esm.html#esm_commonjs_namespaces)；如果你的模块是 2 者都要兼容的，则 ESM 和 CJS 都要支持。
+::: 参考 #
+模块开发者选择 EMS 和 CJS 时，需要判断运行时环境：如果你的模块是只面向浏览器的则选择 ESM；如果你的模块是只面向 Node.js 的则选择 CJS，并且确定遵循[CJS 命名空间规则](https://nodejs.org/api/esm.html#esm_commonjs_namespaces)；如果你的模块是 2 者都要兼容的，则 ESM 和 CJS 都要支持。
+:::
 
 
 Node.js 的模块，历史上 Node.js 遵循的是 CommonJS，因此 ES6 Module 会有比较严重的兼容性问题。暂时没有特别好的解法，只能在 Node.js 中跟进运行时环境，判断使用模块标准。[讨论 issue](https://github.com/nodejs/node/issues/33954)
@@ -2416,8 +2430,8 @@ Node.js 的模块，历史上 Node.js 遵循的是 CommonJS，因此 ES6 Module 
 ### 操作符
 
 
-::: 推荐
-2.8.1. 使用严格相等运算符。eslint: [eqeqeq](https://eslint.org/docs/rules/eqeqeq)
+::: 推荐 #
+使用严格相等运算符。eslint: [eqeqeq](https://eslint.org/docs/rules/eqeqeq)
 :::
 
 
@@ -2425,7 +2439,7 @@ Node.js 的模块，历史上 Node.js 遵循的是 CommonJS，因此 ES6 Module 
 
 因此，一般情况下我们应该使用严格比较运算符（ `===` 和 `!==`）进行比较。如果要比较的两个值类型不同，应该显性地将其转换成相同类型再进行严格比较，而不是依赖于 `==` 和 `!=` 的隐式类型转换。
 
-  ```javascript
+```javascript
 const id = '83949';
 
 // bad - 为了兼容 id 可能是字符串的情况，而有意使用 == 与数字比较
@@ -2437,11 +2451,11 @@ if (id == 83949) {
 if (Number(id) === 83949) {
     // do something
 }
-  ```
+```
 
 
-::: 强制
-2.8.2. 不要使用一元自增自减运算符。`eslint`: [no-plusplus](https://eslint.org/docs/rules/no-plusplus)
+::: 强制 #
+不要使用一元自增自减运算符。`eslint`: [no-plusplus](https://eslint.org/docs/rules/no-plusplus)
 :::
 
 
@@ -2449,7 +2463,7 @@ if (Number(id) === 83949) {
 
 `++` 和 `--` 会带来值是否会提前变化带来的理解成本，也可能因为自动添加分号机制导致一些错误，因此我们推荐使用 `num += 1` 来代替 `num++`。但出于习惯，在 `for` 循环的条件中依然可以使用自增自减运算符。
 
-  ```javascript
+```javascript
 let num = 1;
 
 // bad
@@ -2459,48 +2473,48 @@ num++;
 // good
 num += 1;
 num -= 1;
-  ```
+```
 
 
-::: 强制
-2.8.3. 不要使用 `void` 运算符。`eslint`: [no-void](https://eslint.org/docs/rules/no-void)
+::: 强制 #
+不要使用 `void` 运算符。`eslint`: [no-void](https://eslint.org/docs/rules/no-void)
 :::
 
 
 在很老版本的 JS 中，`undefined` 值是可变的，因此使用 `void` 语句一般是用来得到一个 `undefined` 值。而在新版本的 JS 中，上面的问题已不复存在。因此出于程序可读性的考虑，禁止使用 `void` 运算符。
 
-  ```javascript
+```javascript
 // bad
 const foo = void 0;
 
 // good
 const foo = undefined;
-  ```
+```
 
 
-::: 强制
-2.8.4. 避免嵌套的三元表达式。`eslint`: [no-nested-ternary](https://eslint.org/docs/rules/no-nested-ternary)
+::: 强制 #
+避免嵌套的三元表达式。`eslint`: [no-nested-ternary](https://eslint.org/docs/rules/no-nested-ternary)
 :::
 
 
 嵌套的三元表达式会降低代码可读性。
 
-  ```javascript
+```javascript
 // bad
 const foo = bar ? baz : qux === quxx ? bing : bam;
 
 // good
 const qu = qux === quxx ? bing : bam;
 const foo = bar ? baz : qu;
-  ```
+```
 
 
-::: 强制
-2.8.5. 避免不必要的三元表达式。`eslint`: [no-unneeded-ternary](https://eslint.org/docs/rules/no-unneeded-ternary)
+::: 强制 #
+避免不必要的三元表达式。`eslint`: [no-unneeded-ternary](https://eslint.org/docs/rules/no-unneeded-ternary)
 :::
 
 
-  ```javascript
+```javascript
 // bad
 const foo = a ? a : b;
 const bar = c ? true : false;
@@ -2510,17 +2524,17 @@ const baz = c ? false : true;
 const foo = a || b;
 const bar = !!c;
 const baz = !c;
-  ```
+```
 
 
-::: 强制
-2.8.6. 混合使用多种操作符时，用小括号包裹分组。`eslint`: [no-mixed-operators](https://eslint.org/docs/rules/no-mixed-operators)
+::: 强制 #
+混合使用多种操作符时，用小括号包裹分组。`eslint`: [no-mixed-operators](https://eslint.org/docs/rules/no-mixed-operators)
 :::
 
 
 这可以更清晰地表达代码意图，提高可读性。四则运算符（`+`, `-`, `*`, `/`）可以不包裹，因为  大多数人熟知它们的优先级。
 
-  ```javascript
+```javascript
 // bad
 const foo = (a && b < 0) || c > 0 || d + 1 === 0;
 
@@ -2545,18 +2559,18 @@ if (a || (b && c)) {
 
 // good - 四则运算可以不用小括号包裹
 const bar = a + (b / c) * d;
-  ```
+```
 
 
 ### 控制语句
 
 
-::: 强制
-2.9.1. `switch` 语句中的 `case` 需要以 `break` 结尾。`eslint`: [no-fallthrough](https://eslint.org/docs/rules/no-fallthrough)
+::: 强制 #
+`switch` 语句中的 `case` 需要以 `break` 结尾。`eslint`: [no-fallthrough](https://eslint.org/docs/rules/no-fallthrough)
 :::
 
 
-  ```javascript
+```javascript
 // bad
 switch (foo) {
     case 1:
@@ -2578,17 +2592,17 @@ switch (foo) {
     default:
       doSomething();
 }
-  ```
+```
 
 
-::: 推荐
-2.9.2. `switch` 语句需要始终包含 `default` 分支。`eslint`: [default-case](https://eslint.org/docs/rules/default-case)
+::: 推荐 #
+`switch` 语句需要始终包含 `default` 分支。`eslint`: [default-case](https://eslint.org/docs/rules/default-case)
 :::
 
 
 在使用 `switch` 语句时，有时会出现因开发者忘记设置 `default` 而导致错误，因此建议总是给出 `default`。如果有意省略 `default`，请在 `switch` 语句末尾用 `// no default` 注释指明：
 
-  ```javascript
+```javascript
 // bad
 let foo;
 switch (bar) {
@@ -2615,15 +2629,17 @@ switch (bar) {
       break;
     // no default
 }
-  ```
+```
 
 
-2.9.3.【参考】`switch` 语句应包含至少 3 个条件分支。
+::: 参考 #
+`switch` 语句应包含至少 3 个条件分支。
+:::
 
 
 `switch` 语句在有许多条件分支的情况下可以使代码结构更清晰。但对于只有一个或两个条件分支的情况，更适合使用 `if` 语句，`if` 语句更易于书写和阅读。
 
-  ```javascript
+```javascript
 // bad
 let foo;
 switch (bar) {
@@ -2641,15 +2657,17 @@ if (bar === 1) {
 } else {
     foo = 0;
 }
-  ```
+```
 
 
-2.9.4.【参考】控制语句的嵌套层级不要过深。`eslint`: [max-depth](https://eslint.org/docs/rules/max-depth)
+::: 参考 #
+控制语句的嵌套层级不要过深。`eslint`: [max-depth](https://eslint.org/docs/rules/max-depth)
+:::
 
 
 控制语句的嵌套层级不要超过 **4** 级，否则将难以阅读和维护：
 
-  ```javascript
+```javascript
 // bad
 if (condition1) {
     // depth = 1
@@ -2667,17 +2685,17 @@ if (condition1) {
       }
     }
 }
-  ```
+```
 
 
-::: 强制
-2.9.5. for 循环中的计数器应朝着正确方向移动。`eslint`: [for-direction](https://eslint.org/docs/rules/for-direction)
+::: 强制 #
+for 循环中的计数器应朝着正确方向移动。`eslint`: [for-direction](https://eslint.org/docs/rules/for-direction)
 :::
 
 
 当 `for` 循环中更新子句的计数器朝着错误的方向移动时，循环的终止条件将永远无法达到，这会导致死循环的出现。这时要么是程序出现了错误，要么应将 `for` 循环改为 `while` 循环。
 
-  ```javascript
+```javascript
 // bad
 for (let i = 0; i < length; i--) {
     // do something
@@ -2687,17 +2705,17 @@ for (let i = 0; i < length; i--) {
 for (let i = 0; i < length; i++) {
     // do something
 }
-  ```
+```
 
 
-::: 推荐
-2.9.6. `for-in` 循环中需要对 `key` 进行验证。`eslint`: [guard-for-in](https://eslint.org/docs/rules/guard-for-in)
+::: 推荐 #
+`for-in` 循环中需要对 `key` 进行验证。`eslint`: [guard-for-in](https://eslint.org/docs/rules/guard-for-in)
 :::
 
 
 使用 `for-in` 循环时需要避免对象从原型链上继承来的属性也被遍历出来，因此保险的做法是对 key 是否是对象自身的属性进行验证：
 
-  ```javascript
+```javascript
 // bad
 for (const key in foo) {
     doSomething(key);
@@ -2709,13 +2727,15 @@ for (const key in foo) {
       doSomething(key);
     }
 }
-  ```
+```
 
 
-2.9.7.【参考】如果一个 `if` 语句的结果总是返回一个 `return` 语句，那么最后的 `else` 是不必要的。`eslint`: [no-else-return](https://eslint.org/docs/rules/no-else-return)
+::: 参考 #
+如果一个 `if` 语句的结果总是返回一个 `return` 语句，那么最后的 `else` 是不必要的。`eslint`: [no-else-return](https://eslint.org/docs/rules/no-else-return)
+:::
 
 
-  ```javascript
+```javascript
 // bad
 function foo() {
     if (x) {
@@ -2733,10 +2753,12 @@ function foo() {
 
     return y;
 }
-  ```
+```
 
 
-2.9.8.【参考】条件表达式的计算结果。
+::: 参考 #
+条件表达式的计算结果。
+:::
 
 
 条件表达式（例如 `if` 语句的条件）的值为通过抽象方法 `ToBoolean` 进行强制转换所得，计算结果遵守下面的规则：
@@ -2748,7 +2770,7 @@ function foo() {
 - **数字** 如果是 **+0、-0 或 NaN** 被计算为 **false**，否则为 **true**
 - **字符串** 如果是空字符串 `''` 被计算为 **false**，否则为 **true**
 
-  ```javascript
+```javascript
 if ({}) {
     // => true
 }
@@ -2768,20 +2790,20 @@ if ('0') {
 if ('') {
     // => false
 }
-  ```
+```
 
 
 ### 其他
 
 
-::: 强制
-2.10.1. 禁止使用 `eval`。`eslint`: [no-eval](https://eslint.org/docs/rules/no-eval)
+::: 强制 #
+禁止使用 `eval`。`eslint`: [no-eval](https://eslint.org/docs/rules/no-eval)
 :::
 
 
 `eval` 语句存在安全风险，可能导致注入攻击。
 
-  ```javascript
+```javascript
 // bad
 const obj = { x: 'foo' };
 const key = 'x';
@@ -2791,49 +2813,49 @@ const value = eval('obj.' + key);
 const obj = { x: 'foo' };
 const key = 'x';
 const value = obj[key];
-  ```
+```
 
 
-::: 强制
-2.10.2. 禁止使用 `debugger`。`eslint`: [no-debugger](https://eslint.org/docs/rules/no-debugger)
+::: 强制 #
+禁止使用 `debugger`。`eslint`: [no-debugger](https://eslint.org/docs/rules/no-debugger)
 :::
 
 
 `debugger` 语句会让程序暂停，并在当前位置开启调试器。它通常在程序调试阶段使用，不应发布到线上。
 
-  ```javascript
+```javascript
 // bad
 function isTruthy(x) {
     debugger;
     return Boolean(x);
 }
-  ```
+```
 
 
-::: 推荐
-2.10.3. 禁止使用 `alert`。`eslint`: [no-alert](https://eslint.org/docs/rules/no-alert)
+::: 推荐 #
+禁止使用 `alert`。`eslint`: [no-alert](https://eslint.org/docs/rules/no-alert)
 :::
 
 
 `alert` 语句会使浏览器弹出原生警告框，这可能让人感觉你的程序出错了。如果需要对用户弹出警告信息，好的做法是使用第三方的弹窗组件或自己定义警告框样式。同理，`confirm` 和 `prompt` 语句也不应被使用。
 
-  ```javascript
+```javascript
 // bad
 alert('Oops!');
 
 // good - 使用自定义的 Alert 组件
 Alert('Oops!');
-  ```
+```
 
 
-::: 推荐
-2.10.4. 生产环境禁止使用 `console`。eslint: [no-console](https://eslint.org/docs/rules/no-console)
+::: 推荐 #
+生产环境禁止使用 `console`。eslint: [no-console](https://eslint.org/docs/rules/no-console)
 :::
 
 
 `console` 语句通常在调试阶段使用，发布上线前，应该去掉代码里所有的 `console` 语句。
 
-  ```javascript
+```javascript
 // bad
 console.log('Some debug messages..');
 
@@ -2847,22 +2869,22 @@ const utils = {
 };
 
 utils.log('Some debug messages..');
-  ```
+```
 
 
-::: 强制
-2.10.5. 禁止对原生对象或只读的全局对象进行赋值。`eslint`: [no-global-assign](https://eslint.org/docs/rules/no-global-assign)
+::: 强制 #
+禁止对原生对象或只读的全局对象进行赋值。`eslint`: [no-global-assign](https://eslint.org/docs/rules/no-global-assign)
 :::
 
 
 JS 执行环境中会包含一些全局变量和原生对象，如浏览器环境中的 `window`，node 环境中的 `global` 、`process`，`Object`，`undefined` 等。除了像 `window` 这样的众所周知的对象，JS 还提供了数百个内置全局对象，你可能在定义全局变量时无意对它们进行了重新赋值，因此最好的做法是不要定义全局变量。
 
-  ```javascript
+```javascript
 // bad
 window = {};
 Object = null;
 undefined = 1;
-  ```
+```
 
 
 ---
@@ -2873,25 +2895,25 @@ undefined = 1;
 > 注释的目的：提高代码的可读性，从而提高代码的可维护性  
 > 注释的原则：如无必要，勿增注释；如有必要，尽量详尽
 
-::: 推荐
-3.1. 单行注释使用 //。
+::: 推荐 #
+单行注释使用 //。
 :::
 
 
 注释应单独一行写在被注释对象的上方，不要追加在某条语句的后面：
 
-  ```javascript
+```javascript
 // bad
 const active = true; // is current tab
 
 // good
 // is current tab
 const active = true;
-  ```
+```
 
 注释行上方需要有一个空行（除非注释行上方是一个块的顶部），以增加可读性：
 
-  ```javascript
+```javascript
 // bad - 注释行上方需要一个空行
 function getType() {
     console.log('fetching type...');
@@ -2926,15 +2948,15 @@ function getType() {
 
     return type;
 }
-  ```
+```
 
 
-::: 推荐
-3.2. 多行注释使用 /\*_ ... _/，而不是多行的 //。
+::: 推荐 #
+多行注释使用 /\*_ ... _/，而不是多行的 //。
 :::
 
 
-  ```javascript
+```javascript
 // bad
 // make() returns a new element
 // based on the passed in tag name
@@ -2954,17 +2976,17 @@ function make(tag) {
 
     return element;
 }
-  ```
+```
 
 
-::: 强制
-3.3. 注释内容和注释符之间需要有一个空格。eslint: [spaced-comment](https://eslint.org/docs/rules/spaced-comment)
+::: 强制 #
+注释内容和注释符之间需要有一个空格。eslint: [spaced-comment](https://eslint.org/docs/rules/spaced-comment)
 :::
 
 
 注释内容和注释符之间需要有一个空格，以增加可读性：
 
-  ```javascript
+```javascript
 // bad
 //is current tab
 const active = true;
@@ -2994,10 +3016,12 @@ function make(tag) {
 
     return element;
 }
-  ```
+```
 
 
-3.4.【参考】合理使用特殊注释标记。eslint: [no-warning-comments](https://eslint.org/docs/rules/no-warning-comments)
+::: 参考 #
+合理使用特殊注释标记。eslint: [no-warning-comments](https://eslint.org/docs/rules/no-warning-comments)
+:::
 
 
 有时我们发现某个可能的 bug，但因为一些原因还没法修复；或者某个地方还有一些待完成的功能，这时我们需要使用相应的特殊标记注释来告知未来的自己或合作者。最常用的特殊标记有两种：
@@ -3007,7 +3031,7 @@ function make(tag) {
 
 一个我们不愿看到却很普遍的情况是，我们给代码标记 `FIXME` 或 `TODO` 后却一直没找到时间处理。所以当你做了特殊标记，你应该为它负责，在某个时间把它解决。
 
-  ```javascript
+```javascript
 class Calculator extends Abacus {
     constructor() {
       super();
@@ -3019,17 +3043,19 @@ class Calculator extends Abacus {
       this.total = 0;
     }
 }
-  ```
+```
 
 
-3.5.【参考】文档类注释使用 `jsdoc` 规范。
+::: 参考 #
+文档类注释使用 `jsdoc` 规范。
+:::
 
 
 文档类注释，如函数、类、文件、事件等，推荐使用 [jsdoc](http://usejsdoc.org/) 规范或类 jsdoc 的规范。
 
 例如：
 
-  ```javascript
+```javascript
 /**
    * Book类，代表一个书本.
    * @constructor
@@ -3058,10 +3084,12 @@ Book.prototype = {
       this.pageNum = pageNum;
     },
 };
-  ```
+```
 
 
-3.6.【参考】无用的代码注释应被即时删除。
+::: 参考 #
+无用的代码注释应被即时删除。
+:::
 
 
 无用的注释代码会使程序变得臃肿并降低可读性，应被即时删除。你可以通过版本控制系统找回被删除的代码。
@@ -3072,13 +3100,17 @@ Book.prototype = {
 ## 命名
 
 
-4.1.【参考】文件名：使用小写字母命名。考虑到部分操作系统（如 `Windows`, ·）下文件系统大小写不敏感，推荐使用 `-` 连接。例如：`hello-world.js`。
+::: 参考 #
+文件名：使用小写字母命名。考虑到部分操作系统（如 `Windows`, ·）下文件系统大小写不敏感，推荐使用 `-` 连接。例如：`hello-world.js`。
+:::
 
 
-4.2.【参考】使用小驼峰（`camelCase`）命名原始类型、对象、函数、实例。[camelcase](https://eslint.org/docs/rules/camelcase)
+::: 参考 #
+使用小驼峰（`camelCase`）命名原始类型、对象、函数、实例。[camelcase](https://eslint.org/docs/rules/camelcase)
+:::
 
 
-  ```javascript
+```javascript
 // bad
 const this_is_my_string = 'foo';
 const this_is_my_object = {};
@@ -3088,15 +3120,15 @@ function this_is_my_function() {}
 const thisIsMyString = 'foo';
 const thisIsMyObject = {};
 function thisIsMyFunction() {}
-  ```
+```
 
 
-::: 强制
-4.3. 使用大驼峰（`PascalCase`）命名类和构造函数。`eslint`: [new-cap](https://eslint.org/docs/rules/new-cap)
+::: 强制 #
+使用大驼峰（`PascalCase`）命名类和构造函数。`eslint`: [new-cap](https://eslint.org/docs/rules/new-cap)
 :::
 
 
-  ```javascript
+```javascript
 // bad
 function user(options) {
     this.name = options.name;
@@ -3116,10 +3148,12 @@ class User {
 const good = new User({
     name: 'yup',
 });
-  ```
+```
 
 
-4.4.【参考】全部大写字母&单词间用下划线分割的命名模式（`UPPERCASE_VARIABLES`）。
+::: 参考 #
+全部大写字母&单词间用下划线分割的命名模式（`UPPERCASE_VARIABLES`）。
+:::
 
 
 全大写字母、单词间使用下划线分割的命名模式（`UPPERCASE_VARIABLES`），仅用于命名常量，且该常量需同时满足如下条件：
@@ -3129,7 +3163,7 @@ const good = new User({
 
 ES6 后 `const` 关键字用于声明常量，被广泛使用，如果所有用 `const` 声明的值都用 `UPPERCASE_VARIABLES` 模式命名会使可读性变差，是没有必要的。因此我们约定 `UPPERCASE_VARIABLES` 命名模式只用于 `export` 给其他文件用的常量，如果只在同文件内使用，依然使用正常的命名风格。
 
-  ```javascript
+```javascript
 // bad - 在本文件中使用的常量，不需使用 UPPERCASE_VARIABLES 风格
 const PRIVATE_VARIABLE = 'should not be unnecessarily uppercased within a file';
 
@@ -3138,11 +3172,11 @@ export let REASSIGNABLE_VARIABLE = 'do not use let with uppercase variables';
 
 // good
 export const THIS_IS_CONSTANT = '一个常量';
-  ```
+```
 
 此外，如果 `export` 一个对象，只有对象本身需要使用 UPPERCASE_VARIABLES ，对象属性的 key 仍然使用正常命名风格：
 
-  ```javascript
+```javascript
 // bad - unnecessarily uppercases key while adding no semantic value
 export const AN_OBJECT = {
     KEY: 'value',
@@ -3152,25 +3186,27 @@ export const AN_OBJECT = {
 export const AN_OBJECT = {
     key: 'value',
 };
-  ```
+```
 
 
-4.5.【参考】模块相关的命名规范。
+::: 参考 #
+模块相关的命名规范。
+:::
 
 
 使用小驼峰（`camelCase`）命名 `export` 的函数：
 
-  ```javascript
+```javascript
 function makeStyleGuide() {
     // ...
 }
 
 export default makeStyleGuide;
-  ```
+```
 
 使用大驼峰（`PascalCase`）命名 `export` 的 class、函数库、字面量对象：
 
-  ```javascript
+```javascript
 const AnObject = {
     foo: {
       // ...
@@ -3178,15 +3214,17 @@ const AnObject = {
 };
 
 export default AnObject;
-  ```
+```
 
 
-4.6.【参考】命名不要以下划线开头或结尾。`eslint`: [no-underscore-dangle](https://eslint.org/docs/rules/no-underscore-dangle)
+::: 参考 #
+命名不要以下划线开头或结尾。`eslint`: [no-underscore-dangle](https://eslint.org/docs/rules/no-underscore-dangle)
+:::
 
 
 JS 没有私有属性或私有方法的概念，这样的命名可能会让人误解。
 
-  ```javascript
+```javascript
 // bad
 this.__firstName__ = 'Panda';
 this.firstName_ = 'Panda';
@@ -3194,7 +3232,7 @@ this._firstName = 'Panda';
 
 // good
 this.firstName = 'Panda';
-  ```
+```
 
 
 ## 参考资料

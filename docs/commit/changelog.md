@@ -17,14 +17,14 @@
 ## 文件
 
 
-::: 强制
-1.1. `Changelog` 文件必须取名为 `CHANGELOG.md`
+::: 强制 #
+`Changelog` 文件必须取名为 `CHANGELOG.md`
 :::
 
 
 使用大写来表明本文件的重要性，相当于是项目仓库元信息的一部分。
 
-  ```markdown
+```markdown
 <!-- bad -->
 
 changelog.md
@@ -35,15 +35,15 @@ CHANGELOG.MD
 <!-- good -->
 
 CHANGELOG.md
-  ```
+```
 
 
-::: 强制
-1.2. Changelog 文件必须是使用标准 Markdown 语法的文本文件，并以 `.md` 作为后缀
+::: 强制 #
+Changelog 文件必须是使用标准 Markdown 语法的文本文件，并以 `.md` 作为后缀
 :::
 
 
-  ```markdown
+```markdown
 <!-- bad -->
 
 CHANGELOG.txt
@@ -52,11 +52,11 @@ CHANGELOG.docx
 <!-- good -->
 
 CHANGELOG.md
-  ```
+```
 
 
-::: 强制
-1.3. `Changelog` 文件必须存放在项目根目录下，和 `README.md`、`CONTRIBUTING.md` 等并列
+::: 强制 #
+`Changelog` 文件必须存放在项目根目录下，和 `README.md`、`CONTRIBUTING.md` 等并列
 :::
 
 
@@ -86,12 +86,12 @@ CHANGELOG.md
 详细规则如下：
 
 
-::: 强制
-2.1. 文章标题使用「更新日志」作为固定文案。国际化场景使用英文「Change Log」作为固定文案
+::: 强制 #
+文章标题使用「更新日志」作为固定文案。国际化场景使用英文「Change Log」作为固定文案
 :::
 
 
-  ```markdown
+```markdown
 <!-- bad -->
 
 # 修改日志
@@ -103,15 +103,15 @@ CHANGELOG.md
 # 更新日志
 
 # Change Log
-  ```
+```
 
 
-::: 强制
-2.2. `Changelog` 内容按版本号降序排列，最新版本放在最前面
+::: 强制 #
+`Changelog` 内容按版本号降序排列，最新版本放在最前面
 :::
 
 
-  ```markdown
+```markdown
 <!-- bad -->
 
 ## 1.0.0
@@ -123,15 +123,15 @@ CHANGELOG.md
 ## 2.0.0
 
 ## 1.0.0
-  ```
+```
 
 
-::: 强制
-2.3. 版本号 `version` 需遵循 [SemVer 规范](https://semver.org/lang/zh-CN/)
+::: 强制 #
+版本号 `version` 需遵循 [SemVer 规范](https://semver.org/lang/zh-CN/)
 :::
 
 
-  ```markdown
+```markdown
 <!-- bad -->
 
 ## 2.0
@@ -161,15 +161,15 @@ CHANGELOG.md
 ## 1.0.0-alpha.1
 
 ## 1.0.0-alpha
-  ```
+```
 
 
-::: 推荐
-2.4. 版本号增加一个超链接，指向当前版本和上一个版本之间的 `diff
+::: 推荐 #
+版本号增加一个超链接，指向当前版本和上一个版本之间的 `diff
 :::
 
 
-  ```markdown
+```markdown
 <!-- bad -->
 
 ## 2.0.0
@@ -177,15 +177,15 @@ CHANGELOG.md
 <!-- good -->
 
 ## [2.0.0](https://version-diff-url)
-  ```
+```
 
 
-::: 强制
-2.5. 更新日期 `date` 采用 `yyyy-MM-dd` 格式
+::: 强制 #
+更新日期 `date` 采用 `yyyy-MM-dd` 格式
 :::
 
 
-  ```markdown
+```markdown
 <!-- bad -->
 
 ## [2.0.0](https://version-diff-url) (20200905)
@@ -195,11 +195,11 @@ CHANGELOG.md
 <!-- good -->
 
 ## [2.0.0](https://version-diff-url) (2020-09-05)
-  ```
+```
 
 
-::: 推荐
-2.6. 更新类型 `type` 与 Git message header 中的 [`type`]相关联，可以不一一对应
+::: 推荐 #
+更新类型 `type` 与 Git message header 中的 [`type`]相关联，可以不一一对应
 :::
 
 
@@ -215,8 +215,8 @@ CHANGELOG.md
 - 重大变更（`Breaking Changes`）：破坏性变动。
 
 
-::: 推荐
-2.7. 更新描述 `desc` 内容需要注意以下几点：
+::: 推荐 #
+更新描述 `desc` 内容需要注意以下几点：
 :::
 
 

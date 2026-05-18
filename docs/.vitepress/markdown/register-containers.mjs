@@ -1,6 +1,6 @@
 import container from 'markdown-it-container'
 
-/** 显式使用默认标题（「强制」/「推荐」），无需写两遍类型名 */
+/** 显式使用默认标题（「强制」/「推荐」/「参考」），无需写两遍类型名 */
 const DEFAULT_TITLE_MARK = '#'
 
 /**
@@ -16,7 +16,7 @@ function resolveTitle(info, name) {
 }
 
 /**
- * 注册 ::: 推荐 / ::: 强制 容器（写法用中文，HTML class 用 ASCII 便于样式命中）。
+ * 注册 ::: 推荐 / ::: 强制 / ::: 参考 容器（写法用中文，HTML class 用 ASCII 便于样式命中）。
  * @param {import('markdown-it').default} md
  * @param {string} name markdown 里写的类型名，如「推荐」
  * @param {string} className 加到 DOM 的 class，如 recommend
@@ -40,7 +40,7 @@ function registerContainer(md, name, className) {
         const title = md.renderInline(titleText, {
           references: env.references,
         })
-        return `<motion-div ${attrs}><p class="custom-block-title">${title}</p>\n`.replaceAll(
+        return `<motion-div ${attrs}><span class="custom-block-title">${title}</span> `.replaceAll(
           'motion-div',
           'div',
         )
@@ -54,4 +54,5 @@ function registerContainer(md, name, className) {
 export function registerSpecContainers(md) {
   registerContainer(md, '推荐', 'recommend')
   registerContainer(md, '强制', 'mandatory')
+  registerContainer(md, '参考', 'reference')
 }
