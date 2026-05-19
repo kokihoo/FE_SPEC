@@ -309,24 +309,24 @@ class Foo {
 ```typescript
 // bad: comma style(JSON style)
 interface Foo {
-    name: string;
-    greet(): void;
+    name: string,
+    greet(): void,
 }
 
 type Bar = {
-    name: string;
-    greet(): void;
+    name: string,
+    greet(): void,
 };
 
 // bad: line break style
 interface Foo {
-    name: string;
-    greet(): void;
+    name: string
+    greet(): void
 }
 
 type Bar = {
-    name: string;
-    greet(): void;
+    name: string
+    greet(): void
 };
 
 // good
@@ -408,7 +408,9 @@ type T2 = {
 };
 // 属性方法实现重载
 interface T3 {
-    func: ((arg: number) => void) & ((arg: string) => void) & ((arg: boolean) => void);
+    func: ((arg: number) => void) & 
+    ((arg: string) => void) & 
+    ((arg: boolean) => void);
 }
 ```
 
@@ -434,7 +436,7 @@ const isEqualsNum = 1 + foo.num! == 2;
 // good
 const foo: Foo = getFoo();
 const isEqualsBar = foo.bar == 'hello';
-const isEqualsNum = 1 + foo.num! == 2;
+const isEqualsNum = (1 + foo.num!) == 2;
 ```
 
 
@@ -670,7 +672,7 @@ declare namespace Foo {}
 
 ```typescript
 // bad
-const foo = 'bar';
+const foo = "bar";
 
 // good
 const foo = 'bar';
@@ -723,27 +725,27 @@ import myModule from './my-module';
 
 ```typescript
 // bad
-let foo: string = 'bar';
-let foo: string = 'bar';
-let foo: string = 'bar';
+let foo:string = 'bar';
+let foo :string = 'bar';
+let foo : string = 'bar';
 
 function foo(): string {}
 function foo(): string {}
 function foo(): string {}
 
 class Foo {
-    name: string;
+    name:string;
 }
 
 class Foo {
-    name: string;
+    name :string;
 }
 
 class Foo {
-    name: string;
+    name : string;
 }
 
-type Foo = () => {};
+type Foo = ()=>{};
 
 // good
 let foo: string = 'bar';
@@ -794,5 +796,3 @@ f(...x: number[]): void;
 function f(x: number | string): void;
 function f(x?: ...number[]): void;
 ```
-
-
