@@ -1,33 +1,33 @@
 .foo {
-    color: #abc;
+  color: #abc;
 }
 
-.{padding-left: 15px;}
+.selector{padding-left: 15px;}
 
 .selector1 {
-  padding-left :15px;
+padding-left :15px;
 
-  background-size: 0,0;
+background-size: 0,0;
 }
 
 .selector2 {padding-left: 15px;
 }
 .selector3 {
-  padding-left: 15px;}
+padding-left: 15px;}
 
 .selector4 { color: pink; top: 3px; }
 
 .selector5 {
-  width: 0rem;
+width: 0rem;
 
-  color: #AAA;
-  background: #aaaaaa;
+color: #AAA;
+background: #aaaaaa;
 }
 
 #foo {
-  color: #ccc;
+color: #ccc;
 }
 
-/* */
+/*comment */
 
 @unkown colorTag(#abc);

@@ -1,0 +1,100 @@
+{
+  "version": "6.0",
+  "nxVersion": "22.7.2",
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": "commitlint-config/README.md",
+        "hash": "7649948828012593697"
+      },
+      {
+        "file": "commitlint-config/__tests__/commitlint-config.test.js",
+        "hash": "3532730221416561599"
+      },
+      {
+        "file": "commitlint-config/index.js",
+        "hash": "16493955136299901778"
+      },
+      {
+        "file": "commitlint-config/index.note.md",
+        "hash": "7033309838620475829"
+      },
+      {
+        "file": "commitlint-config/lib/commitlint-config.js",
+        "hash": "13800535599092509499"
+      },
+      {
+        "file": "commitlint-config/package.json",
+        "hash": "15570886227123945242"
+      },
+      {
+        "file": "markdownlint-config/README.md",
+        "hash": "7601609789748377299"
+      },
+      {
+        "file": "markdownlint-config/__tests__/markdownlint-config.test.js",
+        "hash": "5609162068701006472"
+      },
+      {
+        "file": "markdownlint-config/index.json",
+        "hash": "1954079022351621386"
+      },
+      {
+        "file": "markdownlint-config/lib/markdownlint-config.js",
+        "hash": "1040993863409875072"
+      },
+      {
+        "file": "markdownlint-config/package.json",
+        "hash": "1109260162728045831"
+      },
+      {
+        "file": "stylint-config/README.md",
+        "hash": "4804562431846718176"
+      },
+      {
+        "file": "stylint-config/__tests__/fixtures/css-module.scss",
+        "hash": "2707567218347312073"
+      },
+      {
+        "file": "stylint-config/__tests__/fixtures/index.css",
+        "hash": "2127983427299411279"
+      },
+      {
+        "file": "stylint-config/__tests__/fixtures/less-test.less",
+        "hash": "17531479611122428789"
+      },
+      {
+        "file": "stylint-config/__tests__/fixtures/sass-test.scss",
+        "hash": "602475096304106904"
+      },
+      {
+        "file": "stylint-config/__tests__/stylint-config.test copy.js",
+        "hash": "12710362571712841494"
+      },
+      {
+        "file": "stylint-config/__tests__/stylint-config.test.js",
+        "hash": "12502856539086639361"
+      },
+      {
+        "file": "stylint-config/index.js",
+        "hash": "12493382889138857267"
+      },
+      {
+        "file": "stylint-config/jest.config.js",
+        "hash": "17901023389242315764"
+      },
+      {
+        "file": "stylint-config/lib/stylint-config.js",
+        "hash": "10839518353643205513"
+      },
+      {
+        "file": "stylint-config/package.json",
+        "hash": "1881711345226052868"
+      }
+    ]
+  },
+  "externalNodesHash": "3244421341483603138"
+}
