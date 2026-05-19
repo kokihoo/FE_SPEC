@@ -1,5 +1,5 @@
 {
-  "name": "stylint-config",
+  "name": "eslint-config",
   "version": "0.0.0",
   "description": "> TODO: description",
   "homepage": "https://github.com/kokihoo/FE_SPEC#readme",
@@ -12,7 +12,7 @@
   },
   "license": "ISC",
   "author": "H <loviahoohoo@163.com>",
-  "main": "index.js",
+  "main": "lib/eslint-config.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -21,14 +21,9 @@
     "lib"
   ],
   "scripts": {
-    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js"
+    "test": "node ./__tests__/eslint-config.test.js"
   },
   "publishConfig": {
     "registry": "https://registry.npmmirror.com"
-  },
-  "devDependencies": {
-    "jest": "^30.4.2",
-    "stylelint": "^17.11.1",
-    "stylelint-scss": "^7.1.1"
   }
 }
