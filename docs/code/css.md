@@ -25,14 +25,14 @@
 ```css
 /* bad */
 .selector {
-    margin-top: 10px
-    padding-left: 15px
+  margin-top: 10px
+  padding-left: 15px
 }
 
 /* good */
 .selector {
-    margin-top: 10px;
-    padding-left: 15px;
+  margin-top: 10px;
+  padding-left: 15px;
 }
 ```
 
@@ -50,7 +50,7 @@
 
 /* good */
 .selector {
-    padding-left: 15px;
+  padding-left: 15px;
 }
 ```
 
@@ -62,13 +62,13 @@
 
 ```css
 /* bad */
-.selector {
-    padding-left: 15px;
+.selector{
+  padding-left: 15px;
 }
 
 /* good */
 .selector {
-    padding-left: 15px;
+  padding-left: 15px;
 }
 ```
 
@@ -81,14 +81,14 @@
 ```css
 /* bad */
 .selector {
-    margin-top: 10px;
-    padding-left: 15px;
+  margin-top : 10px;
+  padding-left: 15px;
 }
 
 /* good */
 .selector {
-    margin-top: 10px;
-    padding-left: 15px;
+  margin-top: 10px;
+  padding-left: 15px;
 }
 ```
 
@@ -100,19 +100,19 @@
 
 ```css
 /* bad */
-.selector > .children {
-    padding-left: 15px;
+.selector>.children {
+  padding-left: 15px;
 }
-.selector + .brother {
-    padding-left: 15px;
+.selector+.brother {
+  padding-left: 15px;
 }
 
 /* good */
 .selector > .children {
-    padding-left: 15px;
+  padding-left: 15px;
 }
 .selector + .brother {
-    padding-left: 15px;
+  padding-left: 15px;
 }
 ```
 
@@ -125,14 +125,14 @@
 ```css
 /* bad */
 .selector {
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5),inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 /* good */
 .selector {
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 ```
 
@@ -145,21 +145,21 @@
 ```css
 /* bad */
 .selector {
-    /*comment*/
-    /*  comment  */
-    /**
-     *comment
-     */
-    padding-left: 15px;
+  /*comment*/
+  /*  comment  */
+  /**
+  *comment
+  */
+padding-left: 15px;
 }
 
 /* good */
 .selector {
-    /* comment */
-    /**
-     * comment
-     */
-    padding-left: 15px;
+  /* comment */
+  /**
+  * comment
+  */
+padding-left: 15px;
 }
 ```
 
@@ -172,12 +172,11 @@
 ```css
 /* bad */
 .selector {
-    padding-left: 15px;
-}
+  padding-left: 15px;}
 
 /* good */
 .selector {
-    padding-left: 15px;
+  padding-left: 15px;
 }
 ```
 
@@ -190,14 +189,13 @@
 ```css
 /* bad */
 .selector {
-    padding-left: 15px;
-    margin-left: 10px;
+  padding-left: 15px; margin-left: 10px;
 }
 
 /* good */
 .selector {
-    padding-left: 15px;
-    margin-left: 10px;
+  padding-left: 15px;
+  margin-left: 10px;
 }
 ```
 
@@ -212,21 +210,15 @@
 
 ```css
 /* bad */
-background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    color-stop(0.04, rgb(88, 94, 124)),
-    color-stop(0.52, rgb(115, 123, 162))
-);
+background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.04, rgb(88, 94, 124)), color-stop(0.52, rgb(115, 123, 162)));
 
 /* good */
 background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    color-stop(0.04, rgb(88, 94, 124)),
-    color-stop(0.52, rgb(115, 123, 162))
+  linear,
+  left bottom,
+  left top,
+  color-stop(0.04, rgb(88, 94, 124)),
+  color-stop(0.52, rgb(115, 123, 162))
 );
 ```
 
@@ -238,19 +230,17 @@ background-image: -webkit-gradient(
 
 ```css
 /* bad */
-.selector,
-.selector-secondary,
-.selector-third {
-    padding: 15px;
-    margin-bottom: 15px;
+.selector, .selector-secondary, .selector-third {
+  padding: 15px;
+  margin-bottom: 15px;
 }
 
 /* good */
 .selector,
 .selector-secondary,
 .selector-third {
-    padding: 15px;
-    margin-bottom: 15px;
+  padding: 15px;
+  margin-bottom: 15px;
 }
 ```
 
@@ -262,13 +252,11 @@ background-image: -webkit-gradient(
 
 ```css
 /* bad */
-.selector {
-    padding-left: 15px;
-}
+.selector { padding-left: 15px; }
 
 /* good */
 .selector {
-    padding-left: 15px;
+  padding-left: 15px;
 }
 ```
 
@@ -281,19 +269,20 @@ background-image: -webkit-gradient(
 ```css
 /* bad */
 .selector {
-    /* comment */
-    padding-left: 15px;
-    /* comment */
-    padding-right: 15px;
+
+  /* comment */
+  padding-left: 15px;
+  /* comment */
+  padding-right: 15px;
 }
 
 /* good */
 .selector {
-    /* comment */
-    padding-left: 15px;
+  /* comment */
+  padding-left: 15px;
 
-    /* comment */
-    padding-right: 15px;
+  /* comment */
+  padding-right: 15px;
 }
 ```
 
@@ -311,18 +300,18 @@ background-image: -webkit-gradient(
 ```css
 /* bad */
 .normal {
-    padding: 10px;
+  padding: 10px;
 }
 #special {
-    padding: 15px;
+  padding: 15px;
 }
 
 /* good */
 .normal {
-    padding: 10px;
+  padding: 10px;
 }
 .normal.special {
-    padding: 15px;
+  padding: 15px;
 }
 ```
 
@@ -336,13 +325,13 @@ background-image: -webkit-gradient(
 
 ```css
 /* bad */
-input[type='text'] {
-    height: 20px;
+input[type=text] {
+  height: 20px;
 }
 
 /* good */
-input[type='text'] {
-    height: 20px;
+input[type="text"] {
+  height: 20px;
 }
 ```
 
@@ -380,12 +369,12 @@ input[type='text'] {
 ```css
 /* bad */
 .selector {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 /* good */
 .selector {
-    color: #fff;
+  color: #fff;
 }
 ```
 
@@ -403,12 +392,12 @@ input[type='text'] {
 ```css
 /* bad */
 .selector {
-    color: #fefefe;
+  color: #FEFEFE;
 }
 
 /* good */
 .selector {
-    color: #fefefe;
+  color: #fefefe;
 }
 ```
 
@@ -423,14 +412,14 @@ input[type='text'] {
 ```css
 /* bad */
 .selector {
-    margin-top: 0px;
-    font-size: 0em;
+  margin-top: 0px;
+  font-size: 0em;
 }
 
 /* good */
 .selector {
-    margin-top: 0;
-    font-size: 0;
+  margin-top: 0;
+  font-size: 0;
 }
 ```
 
@@ -445,14 +434,14 @@ input[type='text'] {
 ```css
 /* bad */
 .selector {
-    opacity: 0.5;
-    left: -0.5px;
+  opacity: .5;
+  left: -.5px;
 }
 
 /* good */
 .selector {
-    opacity: 0.5;
-    left: -0.5px;
+  opacity: 0.5;
+  left: -0.5px;
 }
 ```
 
@@ -485,32 +474,32 @@ input[type='text'] {
 
 ```css
 .declaration-order {
-    /* 定位 */
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
+  /* 定位 */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
 
-    /* 盒模型 */
-    display: block;
-    float: right;
-    width: 100px;
-    height: 100px;
-    border: 1px solid #e5e5e5;
+  /* 盒模型 */
+  display: block;
+  float: right;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #e5e5e5;
 
-    /* 排版 */
-    font: normal 13px 'Helvetica Neue', sans-serif;
-    line-height: 1.5;
-    color: #333;
-    text-align: center;
+  /* 文字排版 */
+  font: normal 13px 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  color: #333;
+  text-align: center;
 
-    /* 外观 */
-    background-color: #f5f5f5;
+  /* 外观 */
+  background-color: #f5f5f5;
 
-    /* 其他 */
-    opacity: 1;
+  /* 其他 */
+  opacity: 1;
 }
 ```
 
@@ -561,12 +550,12 @@ input[type='text'] {
 ```css
 /* bad */
 .selector {
-    margin: 0 0 10px;
+  margin: 0 0 10px;
 }
 
 /* good */
 .selector {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 ```
 
@@ -584,7 +573,7 @@ input[type='text'] {
 ```css
 <!-- bad -->
 <style>
-    @import url("more.css");
+  @import url("more.css");
 </style>
 
 <!-- good -->
@@ -611,12 +600,12 @@ input[type='text'] {
 ```css
 /* bad */
 .selector {
-    width: $default-width/2;
+  width: $default-width/2;
 }
 
 /* good */
 .selector {
-    width: $default-width / 2;
+  width: $default-width / 2;
 }
 ```
 
@@ -629,14 +618,14 @@ Mixin 名称和括号 `()` 间无空格，在拥有多个参数的表达式中�
 ```css
 /* bad */
 .selector {
-    .size(30px,20px);
-    .clearfix ();
+  .size(30px,20px);
+  .clearfix ();
 }
 
 /* good */
 .selector {
-    .size(30px, 20px);
-    .clearfix();
+  .size(30px, 20px);
+  .clearfix();
 }
 ```
 
@@ -656,7 +645,7 @@ Mixin 名称和括号 `()` 间无空格，在拥有多个参数的表达式中�
 $color-red: #f0f0f0;
 
 .selector {
-    color: $color-red;
+  color: $color-red;
 }
 ```
 
@@ -672,13 +661,13 @@ $color-red: #f0f0f0;
 
 ```css
 .btn {
-    background: #ccc;
-    font-weight: bold;
-    @include transition(background 0.5s ease);
+  background: #ccc;
+  font-weight: bold;
+  @include transition(background 0.5s ease);
 
-    .icon {
-      margin-right: 10px;
-    }
+  .icon {
+    margin-right: 10px;
+  }
 }
 ```
 
@@ -693,11 +682,11 @@ $color-red: #f0f0f0;
 
 ```css
 .container {
-    .header {
-      .user-name {
-        // STOP！不要再嵌套更深选择器
-      }
+  .header {
+    .user-name {
+      // STOP！不要再嵌套更深选择器
     }
+  }
 }
 ```
 
@@ -710,15 +699,15 @@ $color-red: #f0f0f0;
 ```css
 // 单行注释
 .selector-a {
-    padding-left: 15px;
+  padding-left: 15px;
 }
 
 /*
-   * 多行注释
-   * 多行注释
-   */
+ * 多行注释
+ * 多行注释
+ */
 .selector-b {
-    margin-left: 15px;
+  margin-left: 15px;
 }
 ```
 
@@ -726,15 +715,15 @@ $color-red: #f0f0f0;
 
 ```css
 .selector-a {
-    padding-left: 15px;
+  padding-left: 15px;
 }
 
 /*
-   * 多行注释
-   * 多行注释
-   */
+ * 多行注释
+ * 多行注释
+ */
 .selector-b {
-    margin-left: 15px;
+  margin-left: 15px;
 }
 ```
 

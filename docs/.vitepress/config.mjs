@@ -25,7 +25,7 @@ export default defineConfig({
           { text: 'JavaScript', link: '/code/javascript' },
           { text: 'TypeScript', link: '/code/typescript' },
           { text: 'CSS', link: '/code/css' },
-          { text: 'Node', link: '/code/node' },
+          { text: 'Node.js', link: '/code/nodejs' },
         ],
       },
       {
@@ -62,7 +62,7 @@ export default defineConfig({
             { text: 'JavaScript', link: '/code/javascript' },
             { text: 'TypeScript', link: '/code/typescript' },
             { text: 'CSS', link: '/code/css' },
-            { text: 'Node', link: '/code/node' },
+            { text: 'Node.js', link: '/code/nodejs' },
           ],
         },
       ],

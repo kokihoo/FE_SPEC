@@ -1,4 +1,4 @@
-# Node.js 编码规范
+# Node 编码规范
 
 > `Node.js` 规范主要包含编码风格、安全规范、最佳实践等几个部分，目的是给业务同学提供研发过程中的实质性规范和指导。其中编码风格 follow [eslint-config-egg](https://github.com/eggjs/eslint-config-egg)。
 
@@ -382,3 +382,4 @@ luke.jump().setHeight(20);
 - [eslint-plugin-security](https://github.com/nodesecurity/eslint-plugin-security)
 - [eslint-plugin-node](https://github.com/mysticatea/eslint-plugin-node)
 - [airbnb javascript style](https://github.com/airbnb/javascript)
+
